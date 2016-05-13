@@ -1,3 +1,4 @@
+var http = require('http');
 var express = require('express');
 var path = require('path');
 var ejs = require('ejs-locals');
@@ -15,6 +16,26 @@ app.get('/', function (req, res) {
   res.render('index',{title:'Android & IOS Demo Apps'})
 });
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log('Example app listening on port 3000!');
+process.on('uncaughtException', function(err){
+   console.log('handeleed exp', err) 
 });
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(process.env.PORT || 80);
+server.on('error', function(err){
+    console.log('show error', err)
+});
+server.on('listening', onListening);
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  console.log('Listening on ' + bind);
+}
