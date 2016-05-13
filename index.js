@@ -8,7 +8,7 @@ app.engine('html', ejs);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
-app.use(express.static(path.join(__dirname, 'install')));
+app.use('/install', express.static(path.join(__dirname, 'install')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
