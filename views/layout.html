@@ -1,0 +1,29 @@
+<html >
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css"/>
+        <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    </head>
+    <body style="background-color:black !important;color:#fff">        
+        
+   
+    <div class="headerBar" >
+        
+    </div>  
+        <br/>
+        <div  class=" clearfix"  class="ng-scope">
+            
+            <%- body %>
+        </div>
+        <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>   
+        <script>
+            $('#iconContainer').on('click', '#androidApp', function(){
+                $('#iconContainer').css('display', 'none')
+                $('#androidAppList').css('display', 'block')
+            })
+            $('#iconContainer').on('click', '#iosApp', function(){
+                $('#iconContainer').css('display', 'none')
+                $('#iosAppList').css('display', 'block')
+            })
+        </script>
+    </body>
+</html>
