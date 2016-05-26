@@ -1,0 +1,90 @@
+[
+    {
+        "first": Erika,
+        "last": "Samuels",
+        "account": "890771102",
+        "platform": "Web",
+        "reason": "Open an Account",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Jeffery,
+        "last": "Jones",
+        "account": "893297107",
+        "platform": "Tablet",
+        "reason": "Mortgage Rates",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Erika,
+        "last": "Samuels",
+        "account": "890771102",
+        "platform": "Web",
+        "reason": "Open an Account",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Amy,
+        "last": "Bendett",
+        "account": "842771542",
+        "platform": "Web",
+        "reason": "Open a Safe Deposit",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": John,
+        "last": "Doe",
+        "account": "863777907",
+        "platform": "Tablet",
+        "reason": "Open an Account",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Matt,
+        "last": "Johnson",
+        "account": "893277200",
+        "platform": "Phone",
+        "reason": "Credit Card Inquiry",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": John,
+        "last": "John",
+        "account": "863777907",
+        "platform": "Tablet",
+        "reason": "Open an Account",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Erika,
+        "last": "Samuels",
+        "account": "890771102",
+        "platform": "Web",
+        "reason": "Open an Account",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Amy,
+        "last": "Bendett",
+        "account": "842771542",
+        "platform": "Web",
+        "reason": "Open a Safe Deposit",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Erika,
+        "last": "Samuels",
+        "account": "890771102",
+        "platform": "Web",
+        "reason": "Open an Account",
+        "point1": "Lorem Ipsum"
+    },
+    {
+        "first": Jeffery,
+        "last": "Jones",
+        "account": "893297107",
+        "platform": "Tablet",
+        "reason": "Mortgage Rates",
+        "point1": "Lorem Ipsum"
+    }
+]

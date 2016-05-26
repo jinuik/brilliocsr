@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    M&T Dashboard - Client Details
+  </title>
+  
+  
+  <link rel="stylesheet" href="css/jquery-ui.css">
+   <!--JAVASCRIPT-->
+  <script src="js/jquery-2.1.1.min.js">
+  </script>
+  <script src="js/jquery-ui.js">
+  </script>
+  
+
+  <!--=================================================-->
+  
+  <!--Sans pro Font [ OPTIONAL ]-->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!--Bootstrap Stylesheet [ REQUIRED ]-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  
+  <!--Stylesheet [ REQUIRED ]-->
+  <link href="css/demo.min.css" rel="stylesheet">
+  
+  <link href="css/layout.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/client-details.css">
+  <!--STYLESHEET-->
+  <!--SCRIPT-->
+  <!--=================================================-->
+  
+  <!--Page Load Progress Bar [ OPTIONAL ]-->
+  <link href="plugins/pace/pace.min.css" rel="stylesheet">
+  <script src="plugins/pace/pace.min.js">
+  </script>
+  
+  
+  
+  <script>
+    $(function() {
+	/*Sub accordian 1*/
+	$( "#accordion1" ).accordion();
+      $( "#accordion1" ).accordion({
+        collapsible: true,
+		
+        active: false
+      }
+                                 );
+      $( "#accordion1" ).accordion({
+        active: 3,
+        
+		} );
+                                
+	/*Sub accordian 2*/
+	$( "#accordion2" ).accordion();
+      $( "#accordion2" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion2" ).accordion({
+        active: 2 }
+                                 );
+	/*Sub accordian 2*/
+	$( "#accordion3" ).accordion();
+      $( "#accordion3" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion3" ).accordion({
+        active: 3 }
+                                 );
+	/*Sub accordian 2*/
+	$( "#accordion4" ).accordion();
+      $( "#accordion4" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion4" ).accordion({
+        active: 3 }
+                                 );
+ /*Sub accordian 2*/
+	$( "#accordion5" ).accordion();
+      $( "#accordion5" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion5" ).accordion({
+        active: 3 }
+                                 );
+	/*Sub accordian End*/
+	
+      $( "#accordion" ).accordion();
+      $( "#accordion" ).accordion({
+        collapsible: true,
+        active: false,
+		 
+      }
+                                 );
+$("#accordion .evenHeader,#accordion .oddHeader").bind("click",function(){
+
+$("#accordion .oddDiv").css( "height","auto" );
+$("#accordion .evenDiv").css( "height","auto" );
+});
+$("#accordion .oddDiv").css( "height","auto" );
+$("#accordion .evenDiv").css( "height","auto" );
+      $( "#accordion" ).accordion({
+        active: 3,
+		}
+                                 );
+$("#cash").change(function() {
+    if(this.checked) {
+       $(".byCash").show(500);
+    }
+	else
+	{
+	  $(".byCash").hide(500);
+	}
+	
+});
+$("#cheque").change(function() {
+    if(this.checked) {
+       $(".byCheck").show(500);
+    }
+	else
+	{
+	  $(".byCheck").hide(500);
+	}
+	
+});
+	/*Click function for CeSign*/
+	$(".ceSign").bind('click',function(){
+	$("#popup").show();
+	});
+	$(".btn").bind('click',function(){
+	$("#popup").hide();
+	});							 
+      //var firstname =getQueryVariable("firstname");
+      var firstname ="ERIKA";
+	  // var lastName =getQueryVariable("lastname");
+	  var lastName ="SAMUELs";
+	  document.getElementById('clientname').innerHTML=firstname+'&nbsp'+lastName;
+    }
+     );
+   
+
+		function getQueryVariable(variable) {
+		  var query = window.location.search.substring(1);
+		  var vars = query.split("&");
+		  for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			if (pair[0] == variable) {
+			  return pair[1];
+			}
+		  } 
+		 
+		}
+    
+  </script>
+  
+  
+  
+  </head>
+  
+  <!--TIPS-->
+  <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+  
+  <body>
+    <header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						
+                        <li>
+                        	<a href="index.html" class="navbar-brand">
+								<img src="img/logo.png" alt="M&T" class="brand-icon">
+							</a>
+                        </li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+						<!--Language selector-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="dropdown">
+							
+							
+									<span class="help-line">Helpline No 1-866-791-0658</span>
+					
+							
+
+							
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End language selector-->
+
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#">
+								
+								<div class="username hidden-xs">Find A Branch</div>
+							</a>
+
+						</li>
+						
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="img/User.png" alt="Profile Picture">
+								</span>
+								<div class="username hidden-xs" style="text-decoration:none;">John Smith - <span style="font-size:12px;">Branch Manager</span></div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+									<li>
+										<a href="#">
+											<i class="fa fa-gear fa-fw fa-lg"></i> Settings
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-question-circle fa-fw fa-lg"></i> Help
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-sign-out fa-fw"></i> Logout
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+							
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+              <!--===================================================-->
+              <!--END NAVBAR-->
+              <div id="container" class="effect mainnav-sm">
+                
+                <!--NAVBAR-->
+                <!--===================================================-->
+                
+                
+                <div class="boxed">
+                  
+                  <!--CONTENT CONTAINER-->
+                  <!--===================================================-->
+                  <div class="row">
+				  <div id="popup" style="display:none">
+					  <div id="popupContainer"  >
+						  <p style="font-size:22px; padding-left:10px">Adopt Your Signature</p>
+						  <p style="padding-left:10px">Confirm your name, initials and signature</p>
+						  <div style="padding-left:10px;width:270px;float:left"><p>Full Name</p><input style="padding:10px;"  type="text"value="Erika Samuels"></div>
+						  <div style="margin-left:60px;width:270px;float:left"><p>Initials</p><input style="padding:10px;"  type="text"value="ES"></div>
+						  <p style="clear:both"></p>
+						   <p style="padding-left:10px;clear:both"><span style="color:#007856">Select Style </span>| Draw</p>
+						   <img style="height:101px;padding-left:10px;"src="images/digital_sign.jpg"/>
+						   <p style="padding-left:10px;clear:both"><u>Change Style</u></p>
+						   <p style="padding-left:10px;clear:both">By clicking Adopt and Sign, I agree that the signature and initials will be the electronic representation of my signature and initials for all purposes when I (or my agent) use them on documents, including legally binding contracts - just the same as pen-and-paper signature or initial.</p>
+						   <div><button style="margin-left:10px;background-color:rgb(0, 120, 86);color:white" type="button" class="btn btn-default" >Adopt and Sign</button><button type="button" style="margin-left:30px;background-color:rgb(127, 127, 128)" class="btn btn-default">Cancel</button></div>
+					  </div>
+				  </div>
+                    <div class="panel custom-panel">
+                    <div id="content-container" class="col-md-9 col-lg-9">
+                      <div class="content-panel">
+                      <div id="clientname" class="header">
+                        ERIKA SAMUELS
+                       <!--  <input class="searchField" placeholder="Search Client" type="search" name="clientSearch" /> -->
+                      </div>
+					  
+					  	<div id="page-content">
+                    
+                    <!--Chat Widget-->
+							<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+							<div class="panel custom-panel">
+													
+								<!--Chat widget body-->
+								<div id="demo-chat-body" class="collapse in">
+									<div class="nano" style="height:531px;">
+										<div class="nano-content pad-all">
+											<!--Clients Table-->
+											
+											<div class="accordionContainer" style="min-height:600px;">
+                        <div id="accordion">
+                          <h3 class="oddHeader">
+                             Customer Profile
+                            <span class="doneTick">
+                              &nbsp;&nbsp;
+                            </span>
+                            <span  style="font-style:italic">
+                              Done
+                            </span>
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv" id="heightFallback">
+							
+								<div id="accordion1" >
+									<h3 class="oddHeader">
+										Personal Information
+									</h3>
+									<div class="oddDiv">
+										<p>Customer Name: <span><b>Erika Samuels</b></span></p>
+										<p>Home Telephone: <span><b>614-428-6022</b></span></p>
+										<p>Work Telephone: <span><b>614-428-3456 |</b></span> Work Extension: <span><b>5432</b></span></p>
+										<p>Mobile Number: <span><b>614-555-1234</b></span></p>
+										<p>Email<span class="important">*</span>: <span><b>ErikaSamuels@live.com</b></span></p>
+										<p>Would you like to receive periodic marketing promotions via email?<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="optradio">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label> <input type="radio" checked=true name="optradio">No</label></p>
+									</div>
+									<h3 class="evenHeader">
+										Employment/ School Information
+									</h3>
+									<div class="evenDiv" style="background-color:white">
+									<p>- No Fee for M&T Bank ATMs
+									- $3.00 for Non M&T Bank ATMs located in the United States
+									- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+									outside of the 50 United States or District of Columbia</p>
+									</div>
+									<h3 class="oddHeader">
+										Relationship Information
+									</h3>
+									<div class="oddDiv">
+									<p>- No Fee for M&T Bank ATMs
+									- $3.00 for Non M&T Bank ATMs located in the United States
+									- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+									outside of the 50 United States or District of Columbia</p>
+									</div>
+								
+							   </div>
+                          </div>
+                          <h3 class="evenHeader">
+                            Product Information
+                            <span class="doneTick">
+                              &nbsp;&nbsp;
+                            </span>
+                            <span  style="font-style:italic">
+                              Done
+                            </span>
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="evenDiv" >
+                            <p><input type="checkbox" checked=true id="MTCheck" value=""> <span style="font-size:15px;color:#007856">M&T Classic Checking with Interest</span><br><span style="font-style:italic;font-size:10px"><b>(Change Current Selection - <a href="#"><u>Click here</u></a>)</b></span></p>
+							
+							<p>Do you want to add another account?<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="optradio1">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label> <input type="radio" checked=true name="optradio1">No</label></p>
+							<p><span style="font-size:15px;color:#007856">FEATURES</span></p>
+							<p>Minimum of $25 deposit required at account opening.</p>
+							<p>Monthly Maintenance Charge - $9.95</p>
+							<p>How to Avoid the Monthly Maintenance Charge -<br>Make one or more transactions per monthly service charge cycle, such as a deposit, withdrawal, a check, or any debit payments</p>
+							
+							<p>ATM Cash Withdrawal, Cash Advance or Electronic Funds Transfer -<br>- No Fee for M&T Bank ATMs- $3.00 for Non M&T Bank ATMs located in the United States- <br>- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+							outside of the 50 United States or District of Columbia</p>
+							<div style="background-color:#007856;padding:30px;margin-bottom:10px">
+							<p style="color:white">In addition to the optional services that we selected for you, we also offer:<br>- Deposit to Deposit Overdraft Protection<br>- Personal Credit Line Overdraft Protection<br>- Safe Deposit Box<br>- Check Image Statement</p>
+							<p style="color:white">Please contact Customer Service at 800-480-2265 if you would like to change your optional services after your account is opened.</p>
+							</div>
+							
+                          </div>
+                          <h3 class="oddHeader">
+                            Supporting Documents
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv">
+							  <div class="upload">
+								<div class="sdImage camera" >
+								 <div class="TextImage" >Take Photo*</div>
+								 </div>
+									  <div class="SDtext">
+										OR
+									  </div>
+								 <div class="sdImage uploadImg" >
+								   <div class="TextImage" >Upload Photo<br><span class='italic'>(from Scanner)</span></div>
+								 </div>
+								  <div class="SDtext">
+									OR
+								  </div>
+								  <div class="sdImage uploadImg" >
+								  <div class="TextImage" >Upload Photo<br><span class='italic'>(from Cloud)</span></div>
+								  </div>
+								<div style="margin-top: 186px;">
+								<p style="clear: both">*Please make sure the Web Cam is connected in case not using the device camera.</p>	</div>							  
+								</div>
+								
+								<div class="docUploaded">
+								  <span class="docIcon">
+								  </span>
+								  <span  style="font-weight:bold">
+									Documents to be uploaded 
+								  </span>
+								  <p>
+									<span class="checkIcon"></span>
+									  <span  style="font-style:italic">
+										Valid State ID<span style="color: red">*</span>
+									  </span>
+									<br>
+									 <span class="checkIcon"></span>
+									  <span  style="font-style:italic">
+										ID Proof 2<span style="color: red">*</span>
+									  </span>
+									  <br>
+									  
+									  <span  style="font-style:italic">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valid ID Proofs:
+									  </span>
+									  <br>
+									 
+									  <span  style="font-style:italic">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utility Bill
+									  </span>
+									 <br>
+									  
+									  <span  style="font-style:italic">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit Card Statement
+									  </span>
+									  <br>
+									  <span  style="font-style:italic">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Bill
+									  </span>										  
+								</div>
+                            
+                          </div>
+                          <h3 class="evenHeader">
+                            Expected Account Activity
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="evenDiv" style="padding: 1em 0.7em;" >
+						 
+						  <div class="dropdown">
+						   <p class="dropdownText">Purpose of Account</p>
+
+							<select style="padding:5px">
+							<option>Secondary Transaction Account</option>
+								<option >Primary Transaction Account</option>
+								
+								<option>Tertiary Transaction Account</option>
+							</select>
+
+						  </div>
+						  
+						  <div class="dropdown">
+						  <p class="dropdownText">What is the primary method you will use to access yur account?</p>
+						  	<select style="padding:5px">
+							<option>Cash</option>
+								<option>Cheque</option>
+								
+								<option>Online Transaction</option>
+							</select>
+							<!--<button type="button" class="btn review">Review</button>-->
+						  </div>
+                           
+						  <div class="dropdown">
+						  <p class="dropdownText">Will you frequently use your account for any transactions outside of
+							the US (including wires, ATM, purchases or electronic withdrawals)?</p>
+							<select style="padding:5px">
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						  	<p class="dropdownText">What is the approximate number of transactions (include all deposits,
+							withdrawals and purchases) that will be processed through your account
+							monthly?</p>
+							<select style="padding:5px">
+								<option>Less than 50</option>
+								<option>Greater than 50</option>
+								<option>Equal to 50</option>
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						  	<p class="dropdownText">What is the approximate number of monetray instruments (Offcial Checks,
+							Money Orders or Travelers Checks) that will be purchased from or deposited
+							into this account monthly?</p>
+							<select style="padding:5px">
+							<option>None</option>
+								<option>Offcial Checks</option>
+								<option>Money Orders</option>
+								
+							</select>
+						  </div> 
+						   
+						  <div class="dropdown">
+						  <p class="dropdownText">For cash transactions, what is the approximate number df deposit,
+							payments or withdrawals/advances you will be making monthly?</p>
+							<select style="padding:5px">
+							<option>None</option>
+								<option>deposit</option>
+								<option>payments or withdrawals</option>
+								
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						    <p class="dropdownText">What is the approximate number of total wire transactions (incoming and
+							outgoing) you will be making in this account monthly?</p>
+							<select style="padding:5px">
+							<option>None</option>
+								<option>Incoming</option>
+								<option>Outgoing</option>
+								
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						  <p class="dropdownText">What is the approximate number of preauthorized payments, withdrawals,
+							and deposits (ACH transactions) you will do in this account monthly?</p>
+							<select style="padding:5px">
+								<option>Less than 10</option>
+								<option>Greater than 10</option>
+								<option>Equal to 10</option>
+							</select>
+							
+						  </div> 
+
+						  <div class="dropdown">
+					    <p class="dropdownText">Will you be using your account for internet gaming and/or internet casino
+						transactions?</p>
+							<select style="padding:5px">
+							<option>No</option>
+								<option>internet gaming</option>
+								<option>internet casin</option>
+								
+							</select>
+	
+						  </div> 
+                          </div>
+                         <!-- <h3 class="oddHeader">
+                            Enhanced Due Diligence
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv">
+									<p>- No Fee for M&T Bank ATMs
+									- $3.00 for Non M&T Bank ATMs located in the United States
+									- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+									outside of the 50 United States or District of Columbia</p>
+                          </div>-->
+                          <h3 class="oddHeader">
+                            Disclosures and Agreements
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv">
+                            <p>Important information about procedures for opening a new account
+							To help the government fight the funding of terrorism and money laundering activities, federal law requires all financial institutions to
+							obtain, verify, and record information that identifies each person who opens an account.
+                            </p>
+                            <p>What this means for you: When you open an account, we may ask for your name, address, date of birth, and other information that will allow us to identify you. We may also ask for your driver's license number or other identifying information.
+                            </p>
+							<p>In order to open your account, you must first agree to the Consent for Electronic Disclosures ("E-consent"), and then agree to the Account Disclosures. Please read the full text of the E-consent and Account Disclosures.</p>
+							<div id="accordion5">
+							  <h3 class="evenHeader">
+								Capture Consent Using Electronic Signature
+
+							  </h3>
+							   <div class="evenDiv" style="font-size:13px">
+								  <div><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Account Terms and Conditions<span><img class="ceSign" style="position:absolute;right:42px;cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Electronic Consent<span><img class="ceSign"  style="position:absolute;right:42px;cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 3<span><img class="ceSign"  style="position:absolute;right:42px;cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+									<div style="margin-top:10px;margin-bottom:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 4<span><img class="ceSign"  style="position:absolute;right:42px;cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+							  </div>
+							  <h3 class="oddHeader">
+								Capture Consent Using Printed Disclosures
+
+							  </h3>
+							  <div class="oddDiv" style="font-size:13px">
+								<div><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Account Terms and Conditions<span><img style="position:absolute;right:42px;cursor:pointer"src="images/printer_icon.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Electronic Consent<span><img style="position:absolute;right:42px;cursor:pointer"src="images/printer_icon.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 3<span><img style="position:absolute;right:42px;cursor:pointer"src="images/printer_icon.jpg"/></div>
+									<div style="margin-top:10px;margin-bottom:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 4<span><img style="position:absolute;right:42px;cursor:pointer"src="images/printer_icon.jpg"/></div>
+								</div>
+							</div>
+						
+							<!--<p>1. Please open and read the PDF containing the Consent for Electronic Disclosure. Consent for Electronic Disclosure</p>
+							<p>2. Read the following statement and check the box.</p>
+							<p><input type="checkbox" checked=true  value="">I have opened, reviewed and agree to the Consent for Electronic Disclosure..</p>
+							<p>3. Please open and read the PDF containing the Account Disclosures. Account Disclosures</p>
+							<p>4. Read the following statement and check the box.</p>
+							<p><input type="checkbox" checked=true  value="">I read and are willing to agree to the Account Disclosures..</p>
+							<div style="background-color:#EEEFEF;font-size:14px;padding:7px"><p style="color:grey"><b>Taxpayer Identification Number Certification</b></p></div>
+							<p>By law, the IRS requires you to certify the following three statements regarding your tax status, under penalties of perjury:</p>
+							<p>1. The Taxpayer Identification Number(TIN) or Social Security Number given is correct; and</p>
+							<p>2. I am not subject to backup withholding; and</p>
+							<p>3. I am a U.S. Citizen or U.S. Permanent Resident.</p>
+							<p><input type="radio" name="optradio2">I agree with the statements above</p>
+							<p><input type="radio" checked=true  name="optradio2">At least one of the statements above is true. If you select this option, M&T must withhold 28% of all interest payments earned on the account.M&T will forward &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this backup withholding to the IRS.</p>
+							<p></p>-->
+                          </div>
+                          
+                          <h3 class="evenHeader">
+                            Fund Account
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="evenDiv">
+                         	<div id="accordion3">
+								<h3 class="oddHeader">
+									Fund Account Instantly
+								</h3>
+								<div class="oddDiv">
+								
+										<p><input type="checkbox" class="evenHeader" id="cash"  style="margin-right:10px" id="MTCheck" value="">By Cash</p>
+										<div class="byCash" style="display:none">
+										<p>Denominations:</p>
+										<p ><label class="col-sm-2 control-label" for="lg">100*</label><input style="width:200px;"class="form-control" type="text" id="lg"/></p>
+									
+										<p><label class="col-sm-2 control-label" for="lg">50*</label><input style="width:200px;"class="form-control" type="text" id="lg"/></p>
+										<p><label class="col-sm-2 control-label" for="lg">20*</label><input style="width:200px;"class="form-control" type="text" id="lg"/></p>
+										<p><label class="col-sm-2 control-label" for="lg">10*</label><input style="width:200px;"class="form-control" type="text" id="lg"/></p>
+										<p><label class="col-sm-2 control-label" for="lg">5*</label><input style="width:200px;"class="form-control" type="text" id="lg"/></p>
+										<p><label class="col-sm-2 control-label" for="lg">1*</label><input style="width:200px;"class="form-control" type="text" id="lg"/></p>
+										<p><label class="col-sm-2 control-label" for="lg">Amount</label><input style="width:200px;"class="form-control" type="text" id="lg"/></p>
+										</div>
+
+									  <p><input type="checkbox" class="evenHeader" id="cheque"  style="margin-right:10px" id="MTCheck" value="">By Check Capture</p>
+										<div class="byCheck" style="display:none">
+										  <div class="upload" style="width: 87%;">
+											<div class="sdImage camera" >
+											 <div class="TextImage" style="padding-top: 57px;" >Camera<br><span class='italic'>(Capture Check Details<br>using Device Camera)</span></div>
+											 </div>
+											  <div class="text">
+												OR
+											  </div>
+												  <div class="sdImage uploadImg" >
+												  <div class="TextImage" style="padding-top: 57px;" >Scan Check<br><span class='italic'>(Capture Check Details<br>using attached Scanner)</span></div>
+												  </div>  
+											</div>
+										</div>
+										
+									
+								</div>
+								<h3 class="evenHeader">
+									Fund Account Later
+								</h3>
+								<div class="evenDiv" style="background-color:white">
+								<p><input type="checkbox" style="margin-right:10px" id="MTCheck" value="">By Mail<button type="button" style="position:absolute;right:52px;" class="btn review">Print</button></p>
+								<p style="padding:10px 0px"><input type="checkbox" style="margin-right:10px" id="MTCheck" value="">By Electronic Transfer<button style="position:absolute;right:52px;" type="button" class="btn review">Print</button></p>
+								</div>
+								
+					     	</div>   
+                          </div>
+						  <h3 class="oddHeader">
+                            Account Confirmation
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv">
+							<p><span style="font-size:15px;color:#007856">M&T Classic Checking with Interest</span><span style="position:absolute;right:25px">Account Number: 80024362 | Customer ID: 128975</span></p>
+							<p><span style="font-size:15px;color:#007856">FEATURES</span></p>
+							<p>Minimum of $25 deposit required at account opening.</p>
+							<p>Monthly Maintenance Charge - $9.95</p>
+							<p>How to Avoid the Monthly Maintenance Charge -<br>
+							Make one or more transactions per monthly service charge cycle, such as a deposit, withdrawal, a check, or any debit payments</p>
+							<p>ATM Cash Withdrawal, Cash Advance or Electronic Funds Transfer -<br>- $3.00 for Non M&T Bank ATMs located in the United States<br>- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located outside of the 50 United States or District of Columbia</p>
+
+							<div style="background-color:#007856;padding:30px;margin-bottom:10px">
+								<p style="color:white">In addition to the optional services that we selected for you, we also offer:<br>- Deposit to Deposit Overdraft Protection<br>- Personal Credit Line Overdraft Protection<br>- Safe Deposit Box<br>- Check Image Statement<br><br>Please contact Customer Service at 800-480-2265 if you would like to change your optional services after your account is opened.</p>
+
+							</div>
+                          </div>
+						   <h3 class="evenHeader">
+                            Account Customization
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="evenDiv">
+							<div id="accordion2">
+								<h3 class="oddHeader">
+									Recommendation Engine
+								</h3>
+								<div class="oddDiv">
+									<p>Based on your profile, M&T is pleased to offer you a MyChoice Money Market Account with following features:</p>
+									<ul>
+									<li>Competitive tiered interest rates</li>
+									<li>Premium interest rates available2</li>
+									<li>No monthly maintenance charge if you have a MyChoice Premium Checking, Power Checking or Portfolio Management Account or when you keep a minimum daily balance of $2,5003</li>
+									<li>$15 monthly maintenance charge unless one of the above requirements is met</li>
+									</ul>
+									<p>Would you like to enroll?<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="optradio4">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label> <input type="radio" checked=true name="optradio4">No</label></p>
+								</div>
+								<!--<h3 class="evenHeader">
+									Ability to Customize Card
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for M&T Bank ATMs
+								- $3.00 for Non M&T Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>-->
+								<h3 class="evenHeader">
+									Add ATM Pin
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for M&T Bank ATMs
+								- $3.00 for Non M&T Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+								<h3 class="oddHeader">
+									Choose Card Design
+								</h3>
+
+								<div class="oddDiv">
+								<div class="cardHeader" >1) Classic M&T Design</div>
+								<input style="margin-left: -11px;" type="radio" checked=true   class="imageRadioBtn" name="optradio5"><img  class="imageborder" src="images/Img6.jpg" style="height: 120px;margin-left: 13px" alt="card"/>
+								<p class="cardHeader" style="text-align:center"><u>OR</u></p>
+								<div class="cardHeader" >2) M&T Design Templates</div>
+								<div><input style="margin-left: -11px;"  type="radio" class="imageRadioBtn" name="optradio5"><img class="imageborder" src="images/Img1.jpg" style="height: 120px;margin-left: 13px" alt="card"/><input style="margin-left: 60px;" type="radio" class="imageRadioBtn" name="optradio5"><img class="imageborder" src="images/Img2.jpg" style="height: 120px;margin-left: 81px" alt="card"/><input style="margin-left:60px;" type="radio" class="imageRadioBtn" name="optradio5"><img  class="imageborder" src="images/Img3.jpg" style="height: 120px;margin-left: 81px" alt="card"/>
+								</div>
+								<div class="evenDiv" style="background-color:transparent">
+								<div style="margin-top:10px"><input style="margin-left: -11px;" type="radio" class="imageRadioBtn" name="optradio5"><img class="imageborder" src="images/Img4.jpg" style="height: 120px;margin-left: 13px" alt="card"/><input style="margin-left: 60px;" type="radio" class="imageRadioBtn" name="optradio5"><img class="imageborder" src="images/Img5.jpg" style="height: 120px;margin-left: 81px" alt="card"/>
+								</div>
+								</div>
+								<p class="cardHeader" style="text-align:center"><u>OR</u></p>
+								<div class="cardHeader" >3) Customize your card with your own picture</div>
+								 <div class="upload1">
+								<div class="sdImage camera" >
+								 <div class="TextImage" >Take Photo*</div>
+								 </div>
+									  <div class="SDtext1">
+										OR
+									  </div>
+								 <div class="sdImage uploadImg" >
+								   <div class="TextImage" >Upload Photo<br><span class='italic'>(from Scanner)</span></div>
+								 </div>
+								  <div class="SDtext1">
+									OR
+								  </div>
+								  <div class="sdImage uploadImg" >
+								  <div class="TextImage" >Upload Photo<br><span class='italic'>(from Cloud)</span></div>
+								  </div>
+								<div style="margin-top: 186px;">
+								<p style="clear: both">*Please make sure the Web Cam is connected in case not using the device camera.</p>	</div>							  
+								</div>
+								
+								</div>
+								<h3 class="evenHeader">
+									Enrollment in Bill Pay
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for M&T Bank ATMs
+								- $3.00 for Non M&T Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+								<h3 class="oddHeader">
+									Enrollment in Online Banking
+								</h3>
+								<div class="oddDiv">
+								<p>- No Fee for M&T Bank ATMs
+								- $3.00 for Non M&T Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+    							<h3 class="evenHeader">
+									Order Checks
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for M&T Bank ATMs
+								- $3.00 for Non M&T Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+					     	</div>   
+                          </div>
+                        </div>
+                        
+                        
+                        <div>
+                          <button class="doneButton"type="button">
+                            Done
+                          </button>
+                        </div>
+                      </div>
+			
+						
+											
+										</div>
+									</div>
+
+							
+								</div>
+							</div>
+							<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+							<!--End Chat Widget-->
+					<div class="row">
+					
+					
+					</div>
+					
+				
+				</div>
+				
+				
+					 
+				</div>
+			</div>
+		</div>
+                    <!--===================================================-->
+                    <!--END CONTENT CONTAINER-->
+                    	<div id="panel" class="col-lg-3 col-md-3 col-sm-12 right-panel">
+                	<div class="page-title">
+					<h1 class="page-header text-overflow pull-left">ITEMS</h1>
+                    <span class="dropdown pull-left">
+                    <a href="#" id="item-panel" class="dropdown-toggle" aria-expanded="true">
+								<i class="setting-icon"></i>
+					</a> 
+                    
+                    <div class="dropdown-menu dropdown-menu-md with-arrow item-container">
+								<div class="pad-all bord-btm">
+									<table class="table table-striped">
+                                    	<tr><td>Calendar <input type="checkbox" checked class="pull-right"></td></tr>
+                                        <tr><td>Quick Links <input type="checkbox" checked class="pull-right"></td></tr>
+                                        <tr><td>Weather <input type="checkbox"  class="pull-right"></td></tr>
+                                        <tr><td>Item 5 <input type="checkbox"  class="pull-right"></td></tr>
+                                        <tr><td>Item 6 <input type="checkbox" class="pull-right"></td></tr>
+                                                                               
+                                    </table>                                 
+                                    
+								</div>
+                                <button class="button offer_btn dash_sett item-btn">Done</button>
+								
+
+								<!--Dropdown footer-->
+								
+							</div>                   
+                    </span>
+                    <div class="clearfix"></div>
+                     <div class="right_cal">
+						 <span class="pull-left">CALENDAR</span>
+						 <span class="pull-right"><i class="setting-icon-grey"></i></span>
+					 </div>
+					 <div style="padding:8px;margin-top:5px;font-size:12px;background-color:#007856;color:#fff">
+					
+					<div class="dateField" id="dateField" style="margin-top:30px">Monday, Feb 16th</div>
+						<div class="timer" >Next Appointment due in <span class="updateTimer" id="updateTimer">25:00 </span> <br>
+						<span id="appointment"> </span>Erika Samuels<br>Customer Type - Existing<br>Products Enrolled – Checking,Savings<br>
+						Last Branch Visit: 10-Dec-2014
+						</div>
+					</div>
+			         <div class="right_cal" style="font-size:12px;padding:10px 10px;"><span class="pull-left">UPCOMING APPOINTMENTS </span><span class="pull-right"></span></div>
+                    <div class="right_cal_content">
+                    	<h1 class="page-header text-overflow">Monday, Feb 16th</h1>
+						
+						<div id="cal-page-content">                  
+							<div class="panel custom-panel">				
+								<div id="demo-chat-body" class="collapse in">
+									<div class="nano custom-scroll" style="height:83px;">
+										<div class="nano-content pad-all custom-bg">						
+											<div class="panel client-table1">
+												
+											 <table class="table table-striped">
+											<tr>
+											<td id="next0">2 PM</td>
+											<td>Erika Samuels</td>
+											</tr>
+											<tr>
+											<td id="next1">3 PM</td>
+											<td>Jerey Jones</td>
+											</tr>
+											<tr>
+											<td id="next2">4 PM</td>
+											<td>Amy Bendett</td>
+											</tr>
+											<tr>
+											<td id="next3">5 PM</td>
+											<td>John Doe</td>
+											</tr>
+											<tr>
+											<td id="next4">6 PM</td>
+											<td>Matt Johnson</td>
+											</tr>
+											<tr>
+											<td id="next5">7 PM</td>
+											<td>Timothy Walsh</td>
+											</tr>
+											</table>
+                    
+                 
+                   				</div>
+										</div>	
+									</div>	
+								</div>		
+							</div>	
+					
+		
+                    </div>
+                    		<div class="right_cal"><span class="pull-left">QUICK LINKS </span><span class="pull-right"><i class="setting-icon-grey"></i></span></div>
+                    <table class="table table-striped right_quicklink">
+                        <tr><td>Company News</td></tr>
+                        <tr><td>House Mortgage Rate</td></tr>
+                        <tr><td>Interest on Savings A/C</td></tr>
+                        <tr><td>Company Portal</td></tr>
+                        <tr><td>Account Comparisions</td></tr>
+                        
+                        </table>
+                    <!-- <div class="right_cal"><span class="pull-left">OFFER OF THE DAY</span></div>
+                    <div class="right_offer">Apple Pay is now available for your M&T Debit and Credit Cards<br/><br/>
+                    <i class="offer-icon"></i><button class="button offer_btn pull-right">Learn More ></button>
+                    </div> -->
+					
+				  
+                   
+                    
+                    
+                    
+                    </div>
+				</div>
+		</div>
+          </div>
+          
+          <!--MAIN NAVIGATION-->
+          <!--===================================================-->
+          <nav id="mainnav-container">
+            <div id="mainnav">
+              
+              <!--Menu-->
+              <!--================================-->
+              <div id="mainnav-menu-wrap">
+						<div class="nano">
+							<div class="nano-content">
+								<ul id="mainnav-menu" class="list-group">
+						
+									<!--Category name-->
+									<li>
+                                    <div class="tgl-menu-btn">
+                                            <a class="mainnav-toggle" href="#">
+                                                <i class="menu-icon"></i>
+													<span class="menu-title menu-head">
+													<strong>Menu</strong>
+													</span>
+                                            </a>
+                                        </div>
+                                    </li>
+										
+									<!--Menu list item-->
+									<li>
+										<a href="index.html">
+											<i class="dashboard-icon"></i>
+											<span class="menu-title">
+												<strong>Dashboard</strong>
+											
+											</span>
+										</a>
+									</li>
+									
+									<li  class="active-sub">
+										<a href="clients.html">
+											<i class="clients-icon"></i>
+											<span class="menu-title">
+												<strong>Clients</strong>
+											</span>
+										</a>
+									</li>
+
+									<!--Menu list item-->
+									<li>
+										<a href="widgets.html">
+											<i class="loan-icon"></i>
+											<span class="menu-title">
+												<strong>Retails Loans</strong>
+											</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Term, Mortgage, Hire/Purchase </a></li>
+											<li><a href="#">Loan Origination </a></li>
+											<li><a href="#">Loan Booking & Release </a></li>
+											<li><a href="#">Loan Monitoring </a></li>
+											<li><a href="#">Documents Monitoring </a></li>
+											<li><a href="#">Post Dated Cheques Monitoring </a></li>
+											<li><a href="#">Loans Accounting & Reporting</a></li>
+										</ul>
+									</li>
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="deposit-icon"></i>
+											<span class="menu-title">Retails Deposits</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Savings, Current & Fixed Deposits</a></li>
+											<li><a href="#">Accounts Opening & Closure</a></li>
+											<li><a href="#">Cheque Management </a></li>
+											<li><a href="#">Deposit Accounting & Reporting</a></li>
+										</ul>
+									</li>
+								
+									
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="transfer-icon"></i>
+											<span class="menu-title">Funds Transfer</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Inter-Branch </a></li>
+											<li><a href="#">Remittance (TT, DD, TC, etc)</a></li>
+											
+										</ul>
+									</li>
+									<!--Menu list item-->
+									<li>
+										<a href="tables.html">
+											<i class="product-icon"></i>
+											<span class="menu-title">Products Catalog</span>
+										</a>
+									</li>
+						
+									<!--Menu list item-->
+									<li>
+										<a href="charts.html">
+											<i class="interest-icon"></i>
+											<span class="menu-title">Interest, Fees and Commissions</span>
+										</a>
+									</li>
+
+									
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="operational-icon"></i>
+											<span class="menu-title">Operational and Management Reports</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Day/Month/Quarter/Year </a></li>
+											<li><a href="#">Ad hoc Reports</a></li>
+											
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+              <!--================================-->
+              <!--End menu-->
+              
+            </div>
+          </nav>
+          <!--===================================================-->
+          <!--END MAIN NAVIGATION-->
+          
+          
+          <!-- FOOTER -->
+          <!--===================================================-->
+          
+          
+          
+          <!-- SCROLL TOP BUTTON -->
+          <!--===================================================-->
+          <button id="scroll-top" class="btn">
+            <i class="fa fa-chevron-up">
+            </i>
+          </button>
+          <!--===================================================-->
+          
+          
+          
+      </div>
+      <!--===================================================-->
+      <!-- END OF CONTAINER -->
+      
+      
+              </div>
+              
+  </div>
+  <!--===================================================-->
+  <!-- END SETTINGS -->
+  
+  
+ 
+  <!--=================================================-->
+  
+  <!--jQuery [ REQUIRED ]-->
+  
+  
+  
+  <!--BootstrapJS [ RECOMMENDED ]-->
+  <script src="js/bootstrap.min.js">
+  </script>
+  
+  
+  <!-- Plugins [ OPTIONAL ]-->
+  <script src="js/plugins.min.js">
+  </script>
+  
+  
+  <!--Demo script [ DEMONSTRATION ]-->
+  <script src="js/demo/demo.min.js">
+  </script>
+  
+  
+  <!--Specify page [ SAMPLE ]-->
+  <script src="js/demo/dashboard.js">
+  </script>
+
+  <script>
+	$(function() {
+    var today = new Date();
+    var curr_date = today.getDate();
+    var curr_month = today.getMonth();
+    var day = today.getDay();
+    var curr_year = today.getFullYear();
+    var m_names = new Array("January", "February", "March",
+        "April", "May", "June", "July", "August", "September",
+        "October", "November", "December");
+    var d_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+    document.getElementById('dateField').innerHTML = d_names[day] + ' , ' + m_names[curr_month] + " " + curr_date + 'th';
+    var hours = today.getHours();
+    hours = hours + 1;
+    var minutes = today.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var remainingMinutes = 60 - minutes;
+    document.getElementById('next0').innerHTML = hours + " " + ampm;
+    document.getElementById('next1').innerHTML = hours + 1 + " " + ampm;
+    document.getElementById('next2').innerHTML = hours + 2 + " " + ampm;
+    document.getElementById('next3').innerHTML = hours + 3 + " " + ampm;
+    document.getElementById('next4').innerHTML = hours + 4 + " " + ampm;
+    document.getElementById('next5').innerHTML = hours + 5 + " " + ampm;
+    document.getElementById('appointment').innerHTML = hours + " " + ampm + '&nbsp;';
+    var input = remainingMinutes * 60;
+
+    function calculateTime(timer) {
+        var timer = timer;
+        var mins = Math.floor(timer / 60);
+        var secs = timer % 60;
+        var time = (mins < 10 ? "0" : "") + mins + ":" + (secs < 10 ? "0" : "") + secs;
+        return time;
+    };
+
+    setInterval(function() {
+        data = calculateTime(input)
+        if (input > 0) {
+            $("#updateTimer").text(data + ' Mins');
+            input--;
+        } else {
+            $("#updateTimer").text("Time Out")
+        }
+
+    }, 1000);
+
+});
+
+  </script>
+  </body>
+  
+  
+  </html>
+  

@@ -1,0 +1,414 @@
+
+
+.content-panel{
+
+}
+
+.searchField{
+  border: 1px solid #ccc;
+    float: right;
+    font-size: 12px;
+    height: 33px;
+    margin-bottom: 5px;
+    padding: 4px 5px 5px 12px;
+    width: 225px;
+	
+}
+.searchIcon{
+
+}
+.header{
+font-size: 20px;
+color:#414042;
+padding:18px;
+/*text-transform:uppercase;
+}
+
+.doneButton{
+ background: #007A5C;
+	color: #fff;
+    float: right;
+    margin: 20px;
+    padding: 4px 20px;
+	font-weight: 600;
+	 border: medium none;
+	 cursor: pointer;
+	 font-size: 14px;
+	 
+}
+
+.oddDiv{
+background-color: #fff;
+color:#414042;
+height:45%;
+font:14px;
+}
+.evenDiv{
+background-color: #f9f9f9;
+color:#414042;
+height:45%;
+font:14px;
+
+}
+.oddHeader{
+background-color: #fff;
+color:#414042;
+font:18px;
+ padding-left: 45px !important;
+
+}
+.evenHeader{
+background-color: #f9f9f9;
+color:#414042;
+ padding-left: 45px !important;
+ font:18px;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    left: 1em;
+}
+.doneTick{
+background :url("../icons/doneIcon.png") no-repeat scroll ;
+    height: 12px;
+    margin-left: 20px;
+    padding-left: 10px;
+    width: 13px;
+	 padding-bottom: 2px;
+}
+
+.ui-accordion .ui-accordion-header {
+margin :0px;
+/* height: 30px; */
+line-height: 22px !important;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{
+border-radius:0px;
+border-left:0px;
+border-right:0px;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+border:0px;
+border-bottom:1px solid #ccc;
+border-radius:0px;
+}
+.ui-accordion .ui-accordion-content {
+    border-bottom: medium none;
+}
+.ui-state-default .ui-icon{
+background: url('../icons/expandIcon.png') no-repeat ;
+	width: 20px;
+	height: 20px;
+}
+
+.ui-state-active .ui-icon {
+background: url('../icons/collapseIcon.png') no-repeat;
+	width: 20px;
+	height: 4px;
+	margin-top:0px !important;
+}
+.accordionContainer{
+padding:0px 15px 0px 15px;
+}
+
+.upload,.upload1{
+float:left;
+
+
+}
+
+.takePhoto{
+background: url("../icons/photoBox.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  
+    cursor: pointer;
+    float: left;
+    height: 224px;
+    margin: 0px -15px;
+    min-width: 130px;
+    width: 224px;
+}
+.takephotoIcon{
+	background:url("../icons/photo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 71px;
+    margin: 68px auto;
+    text-align: center;
+    width: 130px;
+	
+	cursor:pointer;
+}
+
+.text{
+	text-decoration: underline;
+    text-align: center;
+    float: left;
+	margin: 77px auto;
+    text-align: center;
+    width: 25%;
+	cursor:pointer;
+	font-style:italic
+}
+.uploadImage{
+	background: url("../icons/photoBox.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  
+    cursor: pointer;
+    float: left;
+    height: 224px;
+    margin: 0px -15px;
+    min-width: 130px;
+    width: 224px;
+}
+.uploadIcon{
+	background:url("../icons/upload.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 71px;
+    margin: 71px auto;
+    text-align: center;
+    width: 130px;
+	cursor:pointer;
+}
+
+.docUploaded{
+
+    float: left;
+    height: 250px;
+	padding-top: 15px;
+    margin-top: -12px;
+    
+}
+.docIcon{
+background: url('../icons/attachIcon.png') no-repeat ;
+	 height: 20px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    padding-right: 10px;
+    width: 20px;
+}
+
+.checkIcon{
+background: url('../icons/documentChecklistIconRed.png') no-repeat ;
+	 height: 20px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    padding-right: 10px;
+    width: 20px;
+}
+p {
+    margin: 10px 0 !important;
+}
+.ui-accordion .ui-accordion-content{
+/*height:auto !important;*/
+min-height:0px;
+padding-bottom:0px;
+ overflow: hidden;
+
+}
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon{
+margin-top:-11px ;
+}
+@media screen and (max-width:475px){
+.accordionContainer{
+padding:20px 10px 0px 10px;
+}
+}
+@media screen and (max-width:1230px){
+.ui-accordion .ui-accordion-content{
+height:250px;
+padding-bottom:0px;
+ overflow: scroll;
+
+}
+}
+
+/********Content Design*****************/
+.camera
+{
+  background:url('../images/camera.png')no-repeat;
+}
+.uploadImg
+{
+  background:url('../images/upload.png')no-repeat;
+}
+.sdImage
+{
+  float: left;
+  background-size:167px;
+  height: 167px;
+  width: 167px;
+  cursor:pointer;
+}
+
+.SDtext,.SDtext1
+{
+ text-decoration: underline;
+  text-align: center;
+ 
+  width: 4%;
+  cursor: pointer;
+  font-style: italic;
+}
+.SDtext1
+{
+width:16%;
+}
+.upload1
+{
+  width:100%;
+  margin-left:14px;
+}
+.row
+{
+margin-left:0px !important;
+}
+#popupContainer
+{
+  position: fixed;
+  margin: 0px auto;
+  top: 220px;
+  left: 0px;
+  right: 0px;
+  background-color: #F9F9F9;
+  height: 436px;
+  width: 609px;
+}
+#popup
+{
+width:100%;
+height:100%;
+z-index:1000;
+position:absolute;
+background-color:rgba(27, 28, 29, 0.56);
+}
+.imageRadioBtn
+{
+position:absolute;
+
+}
+.imageRadioBtn img
+{
+
+}
+.review
+{
+background-color: rgba(31, 30, 28, 0.3);
+margin-left:15px;
+}
+.menu1
+{
+width: 215px;
+text-align: left;
+}
+.dropdown-menu
+{
+width: 220px;
+left:500px;
+}
+p
+{
+font-size:13px;
+}
+.important
+{
+	color:red;
+}
+input[type="radio"] {
+  margin:3px;
+  vertical-align: middle;
+	
+}
+
+#MTCheck
+{
+    margin-top:0px;
+	margin-bottom:0px;
+	margin-left:-10px;
+	vertical-align:center;
+}
+.dropdownText
+{
+  width: 63%;
+  
+  padding-right: 100px;
+}
+
+
+#accordion1 .oddHeader,#accordion2 .oddHeader,#accordion3 .oddHeader,#accordion4 .oddHeader
+{
+	background-color:white !important;
+	border:none !important;
+	color:black !important;
+}
+#accordion5 .oddHeader
+{
+	background-color:rgb(249, 249, 249);
+	border:none !important;
+	color:black !important;
+}
+#accordion1 .evenHeader,#accordion2 .evenHeader,#accordion3 .evenHeader,#accordion4 .evenHeader
+{
+background-color:white !important;
+border:none !important;
+color:black !important;
+}
+#accordion5 .oddDiv
+{
+	background-color:rgb(249, 249, 249)!important;
+}
+#accordion5 .evenHeader
+{
+	background-color:rgb(249, 249, 249);
+	border:none !important;
+	color:black !important;
+}
+#accordion1 .ui-state-default .ui-icon,#accordion2 .ui-state-default .ui-icon,#accordion3 .ui-state-default .ui-icon,#accordion4 .ui-state-default .ui-icon,#accordion5 .ui-state-default .ui-icon
+{
+background: url('../images/plus.jpg') no-repeat !important;
+top:61% !important;
+}
+#accordion1 .ui-state-active .ui-icon,#accordion2 .ui-state-active .ui-icon,#accordion3 .ui-state-active .ui-icon,#accordion4 .ui-state-active .ui-icon,#accordion5 .ui-state-active .ui-icon
+{
+background: url('../images/minus.jpg') no-repeat !important;
+top:31% !important;
+height: 14px !important;
+}
+#accordion .dropdown select
+{
+  width: 37%;
+}
+.cardHeader
+{
+font-size:14px;
+color:#000;
+margin-bottom:10px;
+margin-left: -13px;
+}
+.nano>.nano-pane
+{
+width:10px;
+}
+#heightFallback
+{
+height:auto!important;
+}
+.TextImage
+{
+  font-size: 14px;
+  font-weight: 500;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 45px;
+  height: 167px;
+  width: 167px;
+}
+.italic
+{
+font-style:italic;
+}
+.DepositSlip
+{
+float:right;
+background: #EEEFEF;
+display:none;
+}
+/***************************************/

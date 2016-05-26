@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>M&T Client List </title>
+
+
+	<!--STYLESHEET-->
+	<!--=================================================-->
+
+	<!--Sans pro Font [ OPTIONAL ]-->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+
+	<!--Bootstrap Stylesheet [ REQUIRED ]-->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+	<!--Stylesheet [ REQUIRED ]-->
+	<link href="css/demo.min.css" rel="stylesheet">
+
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/ui.jqgrid.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/clientList.css"></link>
+
+	<link href="css/layout.css" rel="stylesheet">
+	<!--SCRIPT-->
+	<!--=================================================-->
+
+	<!--Page Load Progress Bar [ OPTIONAL ]-->
+	<link href="plugins/pace/pace.min.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script> 
+	
+	<script type="text/javascript" src="js/jquery.jqGrid.src.js"></script>
+	<script type="text/javascript" src="clientList.js"></script>
+	<script src="plugins/pace/pace.min.js"></script>
+
+
+	
+	
+
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body>
+<header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						
+                        <li>
+                        	<a href="index.html" class="navbar-brand">
+								<img src="img/logo.png" alt="M&T" class="brand-icon">
+							</a>
+                        </li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+						<!--Language selector-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="dropdown">
+							
+							
+									<span class="help-line">Helpline No 1-866-791-0658</span>
+					
+							
+
+							
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End language selector-->
+
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#">
+								
+								<div class="username hidden-xs">Find A Branch</div>
+							</a>
+
+						</li>
+						
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="img/User.png" alt="Profile Picture">
+								</span>
+								<div class="username hidden-xs" style="text-decoration:none;">John Smith - <span style="font-size:12px;">Branch Manager</span></div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+									<li>
+										<a href="#">
+											<i class="fa fa-gear fa-fw fa-lg"></i> Settings
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-question-circle fa-fw fa-lg"></i> Help
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-sign-out fa-fw"></i> Logout
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+							
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+		<!--===================================================-->
+		<!--END NAVBAR-->
+	<div id="container" class="effect mainnav-sm">
+		
+		<!--NAVBAR-->
+		<!--===================================================-->
+		
+
+		<div class="boxed">
+
+			<!--CONTENT CONTAINER-->
+			<!--===================================================-->
+			<div class="row">
+           
+			<div id="content-container" class="col-md-9 col-lg-9">
+						<!--Page Title-->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<div id="page-title">
+					<h1 class="page-header text-overflow">CLIENTS</h1>
+					<!-- Single button -->
+                       
+					<div id="page-content">
+                    
+                    <div style="display:inline;" class="searchClients">
+						<input id="searchClients" type="text" placeholder="Search Clients" class="searchClientsInput"></input>
+					</div>
+								
+					<div style="height:500px;">
+						
+							<div id="clientListWrapper" class="clientlist">
+								<table id="clientList" class="box-inline text-thin client-header "></table>
+							</div>
+						
+					</div>
+					
+					</div>
+				</div>
+					
+			</div>
+				
+			<!--===================================================-->
+			<!--END CONTENT CONTAINER-->
+           
+					<div id="panel" class="col-lg-3 col-md-3 col-sm-12 right-panel">
+                	<div class="page-title">
+					<h1 class="page-header text-overflow pull-left">ITEMS</h1>
+                    <span class="dropdown pull-left">
+                    <a href="#" id="item-panel" class="dropdown-toggle" aria-expanded="true">
+								<i class="setting-icon"></i>
+					</a> 
+                    
+                    <div class="dropdown-menu dropdown-menu-md with-arrow item-container">
+								<div class="pad-all bord-btm">
+									<table class="table table-striped">
+                                    	<tr><td>Calendar <input type="checkbox" checked class="pull-right"></td></tr>
+                                        <tr><td>Quick Links <input type="checkbox" checked class="pull-right"></td></tr>
+                                        <tr><td>Weather <input type="checkbox"  class="pull-right"></td></tr>
+                                        <tr><td>Item 5 <input type="checkbox"  class="pull-right"></td></tr>
+                                        <tr><td>Item 6 <input type="checkbox" class="pull-right"></td></tr>
+                                                                               
+                                    </table>                                 
+                                    
+								</div>
+                                <button class="button offer_btn dash_sett item-btn">Done</button>
+								
+
+								<!--Dropdown footer-->
+								
+							</div>                   
+                    </span>
+                    <div class="clearfix"></div>
+                     <div class="right_cal">
+						 <span class="pull-left">CALENDAR</span>
+						 <span class="pull-right"><i class="setting-icon-grey"></i></span>
+					 </div>
+					 <div style="padding:8px;margin-top:5px;font-size:12px;background-color:#007856;color:#fff">
+					
+					<div class="dateField" id="dateField" style="margin-top:30px">Monday, Feb 16th</div>
+						<div class="timer" >Next Appointment due in <span class="updateTimer" id="updateTimer">25:00 </span> <br>
+						<span id="appointment"> </span>Erika Samuels<br>Customer Type - Existing<br>Products Enrolled – Checking,Savings<br>
+						Last Branch Visit: 10-Dec-2014
+						</div>
+					</div>
+			           <div class="right_cal" style="font-size:12px;padding:10px 10px;"><span class="pull-left">UPCOMING APPOINTMENTS </span><span class="pull-right"></span></div>
+                    <div class="right_cal_content">
+                    	<h1 class="page-header text-overflow">Monday, Feb 16th</h1>
+						
+						<div id="cal-page-content">                  
+							<div class="panel custom-panel">				
+								<div id="demo-chat-body" class="collapse in">
+									<div class="nano custom-scroll" style="height:83px;">
+										<div class="nano-content pad-all custom-bg">						
+											<div class="panel client-table1">
+												
+											 <table class="table table-striped">
+											<tr>
+											<td id="next0">2 PM</td>
+											<td>Erika Samuels</td>
+											</tr>
+											<tr>
+											<td id="next1">3 PM</td>
+											<td>Jerey Jones</td>
+											</tr>
+											<tr>
+											<td id="next2">4 PM</td>
+											<td>Amy Bendett</td>
+											</tr>
+											<tr>
+											<td id="next3">5 PM</td>
+											<td>John Doe</td>
+											</tr>
+											<tr>
+											<td id="next4">6 PM</td>
+											<td>Matt Johnson</td>
+											</tr>
+											<tr>
+											<td id="next5">7 PM</td>
+											<td>Timothy Walsh</td>
+											</tr>
+											</table>
+                    
+                 
+                   				</div>
+										</div>	
+									</div>	
+								</div>		
+							</div>	
+					
+		
+                    </div>
+                    		<div class="right_cal"><span class="pull-left">QUICK LINKS </span><span class="pull-right"><i class="setting-icon-grey"></i></span></div>
+                    <table class="table table-striped right_quicklink">
+                        <tr><td>Company News</td></tr>
+                        <tr><td>House Mortgage Rate</td></tr>
+                        <tr><td>Interest on Savings A/C</td></tr>
+                        <tr><td>Company Portal</td></tr>
+                        <tr><td>Account Comparisions</td></tr>
+                        
+                        </table>
+                    <!-- <div class="right_cal"><span class="pull-left">OFFER OF THE DAY</span></div>
+                    <div class="right_offer">Apple Pay is now available for your M&T Debit and Credit Cards<br/><br/>
+                    <i class="offer-icon"></i><button class="button offer_btn pull-right">Learn More ></button>
+                    </div> -->
+					
+				  
+                   
+                    
+                    
+                    
+                    </div>
+				</div>
+		</div>
+		</div>
+          
+			
+			<!--MAIN NAVIGATION-->
+			<!--===================================================-->
+			<nav id="mainnav-container">
+				<div id="mainnav">
+					<!--Navigation toogle button-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					
+					<!--Menu-->
+					<!--================================-->
+					<div id="mainnav-menu-wrap">
+						<div class="nano">
+							<div class="nano-content">
+								<ul id="mainnav-menu" class="list-group">
+						
+									<!--Category name-->
+									<li>
+                                    <div class="tgl-menu-btn">
+                                            <a class="mainnav-toggle" href="#">
+                                                <i class="menu-icon"></i>
+													<span class="menu-title menu-head">
+													<strong>Menu</strong>
+													</span>
+                                            </a>
+                                        </div>
+                                    </li>
+										
+									<!--Menu list item-->
+									<li>
+										<a href="index.html">
+											<i class="dashboard-icon"></i>
+											<span class="menu-title">
+												<strong>Dashboard</strong>
+											
+											</span>
+										</a>
+									</li>
+									
+									<li  class="active-sub">
+										<a href="clients.html">
+											<i class="clients-icon"></i>
+											<span class="menu-title">
+												<strong>Clients</strong>
+											</span>
+										</a>
+									</li>
+
+									<!--Menu list item-->
+									<li>
+										<a href="widgets.html">
+											<i class="loan-icon"></i>
+											<span class="menu-title">
+												<strong>Retails Loans</strong>
+											</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Term, Mortgage, Hire/Purchase </a></li>
+											<li><a href="#">Loan Origination </a></li>
+											<li><a href="#">Loan Booking & Release </a></li>
+											<li><a href="#">Loan Monitoring </a></li>
+											<li><a href="#">Documents Monitoring </a></li>
+											<li><a href="#">Post Dated Cheques Monitoring </a></li>
+											<li><a href="#">Loans Accounting & Reporting</a></li>
+										</ul>
+									</li>
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="deposit-icon"></i>
+											<span class="menu-title">Retails Deposits</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Savings, Current & Fixed Deposits</a></li>
+											<li><a href="#">Accounts Opening & Closure</a></li>
+											<li><a href="#">Cheque Management </a></li>
+											<li><a href="#">Deposit Accounting & Reporting</a></li>
+										</ul>
+									</li>
+								
+									
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="transfer-icon"></i>
+											<span class="menu-title">Funds Transfer</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Inter-Branch </a></li>
+											<li><a href="#">Remittance (TT, DD, TC, etc)</a></li>
+											
+										</ul>
+									</li>
+									<!--Menu list item-->
+									<li>
+										<a href="tables.html">
+											<i class="product-icon"></i>
+											<span class="menu-title">Products Catalog</span>
+										</a>
+									</li>
+						
+									<!--Menu list item-->
+									<li>
+										<a href="charts.html">
+											<i class="interest-icon"></i>
+											<span class="menu-title">Interest, Fees and Commissions</span>
+										</a>
+									</li>
+
+									
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="operational-icon"></i>
+											<span class="menu-title">Operational and Management Reports</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Day/Month/Quarter/Year </a></li>
+											<li><a href="#">Ad hoc Reports</a></li>
+											
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--================================-->
+					<!--End menu-->
+
+				</div>
+			</nav>
+			<!--===================================================-->
+			<!--END MAIN NAVIGATION-->
+		
+
+		<!-- FOOTER -->
+		<!--===================================================-->
+		
+
+
+		<!-- SCROLL TOP BUTTON -->
+		<!--===================================================-->
+		<button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+		<!--===================================================-->
+
+
+
+	</div>
+	<!--===================================================-->
+	<!-- END OF CONTAINER -->
+
+			
+		</div>
+		
+	</div>
+	<!--===================================================-->
+	<!-- END SETTINGS -->
+
+	
+	<!--JAVASCRIPT-->
+	<!--=================================================-->
+
+<!--BootstrapJS [ RECOMMENDED ]-->
+	<script src="js/bootstrap.min.js"></script>
+
+	
+	<!-- Plugins [ OPTIONAL ]-->
+	<script src="js/plugins.min.js"></script>
+
+
+	<!--Demo script [ DEMONSTRATION ]-->
+	<script src="js/demo/demo.min.js"></script>
+
+
+	<!--Specify page [ SAMPLE ]-->
+	<script src="js/demo/dashboard.js"></script>
+    
+     <script src="js/demo/tables.js"></script>
+
+<script>
+$(document).ready(function(){	
+	$( ".ui-jqgrid-bdiv" ).wrap( "<div class='nano' style='height:470px;'><div class='nano-content pad-all'></div>" );
+});
+ $(function() {
+    var today = new Date();
+    var curr_date = today.getDate();
+    var curr_month = today.getMonth();
+    var day = today.getDay();
+    var curr_year = today.getFullYear();
+    var m_names = new Array("January", "February", "March",
+        "April", "May", "June", "July", "August", "September",
+        "October", "November", "December");
+    var d_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+    document.getElementById('dateField').innerHTML = d_names[day] + ' , ' + m_names[curr_month] + " " + curr_date + 'th';
+    var hours = today.getHours();
+    hours = hours + 1;
+    var minutes = today.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var remainingMinutes = 60 - minutes;
+    document.getElementById('next0').innerHTML = hours + " " + ampm;
+    document.getElementById('next1').innerHTML = hours + 1 + " " + ampm;
+    document.getElementById('next2').innerHTML = hours + 2 + " " + ampm;
+    document.getElementById('next3').innerHTML = hours + 3 + " " + ampm;
+    document.getElementById('next4').innerHTML = hours + 4 + " " + ampm;
+    document.getElementById('next5').innerHTML = hours + 5 + " " + ampm;
+    document.getElementById('appointment').innerHTML = hours + " " + ampm + '&nbsp;';
+    var input = remainingMinutes * 60;
+
+    function calculateTime(timer) {
+        var timer = timer;
+        var mins = Math.floor(timer / 60);
+        var secs = timer % 60;
+        var time = (mins < 10 ? "0" : "") + mins + ":" + (secs < 10 ? "0" : "") + secs;
+        return time;
+    };
+
+    setInterval(function() {
+        data = calculateTime(input)
+        if (input > 0) {
+            $("#updateTimer").text(data + ' Mins');
+            input--;
+        } else {
+            $("#updateTimer").text("Time Out")
+        }
+
+    }, 1000);
+
+});
+
+		$('#multi-check').click(function(){
+			 
+			$('.multicheck-container').toggle();
+			$('.offer_btn').click(function(){
+				$('.multicheck-container').hide();
+			});
+		});
+		
+		$('#item-panel').click(function(){
+			 
+			$('.item-container').toggle();
+			$('.item-btn').click(function(){
+				$('.item-container').hide();
+			});
+		});
+</script>
+</body>
+
+
+</html>

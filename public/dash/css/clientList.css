@@ -1,0 +1,128 @@
+.clientListHeader{
+	
+	font-size: 24px;
+	color:#414042;
+}
+#clientListWrapper{
+	padding-top: 5px;
+	height: 686px;
+}
+.searchClients{
+	float : right;
+}
+.searchClientsInput{
+	margin-top: -58px;
+	margin-right: 15px;
+	width: 291px;
+	height : 30px;	
+	float: right;
+	color:#414042;
+	border: 1px solid #ccc;
+	padding-left:10px;
+	background-image:url(../images/searchClientsIcon.png) !important;
+    background-repeat:no-repeat;
+    background-position: 254px 4px;
+}
+.clientlist .ui-jqgrid-labels{
+	font-size : 16px;
+	color:#414042;
+}
+
+.clientlist .ui-jqgrid-htable th div{
+	padding-left:0px;
+	padding-top:0px;
+	padding-bottom:20px;
+}
+
+.clientlist .ui-th-column, .clientlist .ui-jqgrid-htable th.ui-th-column {
+	text-align: left;
+padding: 8px 8px;
+background: #eeefef;
+}
+.clientlist tr.jqgrow td {
+	padding: 8px;
+	font-size : 14px;	
+	color:#414042;
+	cursor:pointer;
+}
+.clientlist .ui-widget-content{
+	border-top : 0px transparent !important;
+	border-bottom : 0px transparent !important;
+	height:80%;
+}
+.clientlist .ui-jqgrid{
+	border:1px solid #ccc !important;
+}
+.page-title{
+height:auto !important;
+}
+
+.alternate-rows{
+	background : #f2f2f2;
+}
+.headerSearch{
+	float:right;
+}
+@-moz-document url-prefix() {
+.headerSearch{
+	float: unset !important;
+    margin-bottom: 9px !important;
+    margin-left: 28%;
+}
+}
+.headerFilter{
+	height : 25px;
+	width : 90%;
+	margin-top : 10px;
+	margin-left : 5px;
+	border:1px solid #ccc;
+}
+
+
+.s-ico{
+	display : inline !important;
+	/* background: #ffffff url(../images/sortIcon.png) right no-repeat !important; */
+}
+
+
+
+
+.text-overflow{
+	display:block;
+	font-size : 24px;
+	color:#414042 !important;
+}
+.search{
+	background:url(../images/searchClientsIcon.png) no-repeat right;
+}
+
+.ui-jqgrid tr.jqgrow{
+padding:8px 8px;
+}
+
+.gridHeader{
+
+color:#414042;
+font-size: 15px !important;
+font-weight: 400 !important;
+text-align: left;
+}
+
+.ui-jqgrid-sortable{
+
+color:#414042;
+}
+div#jqgh_clientList_firstName span.s-ico, div#jqgh_clientList_lastName span.s-ico, div#jqgh_clientList_accountNumber span.s-ico  {
+display: none !important;
+}
+.ui-state-default .ui-icon {
+    background-image: url("../images/sortIcon.png") !important;
+}
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url("../images/sortIcon.png") !important;
+}
+.content{
+margin-bottom:20px;
+height:600px !important;
+}
+.client-header{padding:0px !important;}

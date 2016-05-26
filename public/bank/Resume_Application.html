@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+   Synovus - Resume Application
+  </title>
+  
+  
+  <link rel="stylesheet" href="css/jquery-ui.css">
+   <!--JAVASCRIPT-->
+  <script src="js/jquery-2.1.1.min.js">
+  </script>
+  <script src="js/jquery-ui.js">
+  </script>
+  
+
+  <!--=================================================-->
+  
+  <!--Sans pro Font [ OPTIONAL ]-->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!--Bootstrap Stylesheet [ REQUIRED ]-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  
+  <!--Stylesheet [ REQUIRED ]-->
+  <link href="css/demo.min.css" rel="stylesheet">
+  
+  <link href="css/layout.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/client-details.css">
+  <!--STYLESHEET-->
+  <!--SCRIPT-->
+  <!--=================================================-->
+  
+  <!--Page Load Progress Bar [ OPTIONAL ]-->
+  <link href="plugins/pace/pace.min.css" rel="stylesheet">
+  <script src="plugins/pace/pace.min.js">
+  </script>
+  
+  
+  
+  <script>
+    $(function() {
+	/*click function for Account Customization*/
+	$('.clickCustomize').click(function(){
+	
+	if($('.clickCustomize').attr('aria-expanded')=='false')
+	{
+
+	$('.showCoutomize').show();
+	$('.hideCoutomize').hide();
+	}
+	else{
+		$('.showCoutomize').hide();
+		$('.hideCoutomize').show();
+	}
+	});
+	$('.hideRequest').bind('click',function(){
+			$('.showCoutomize').hide();
+			$('.hideCoutomize').show();
+	});
+	/*click function for upload */
+	$('.click').bind('click',function(){
+	$('#screen2').show(1000);
+	$('#screen1').hide(1000);
+	
+	});
+		/*click function for upload */
+	$('.uploadBtn').bind('click',function(){
+	$('#screen1').show(1000);
+	$('#screen2').hide(1000);
+	
+	});
+	
+	/*Sub accordian 1*/
+	$( "#accordion1" ).accordion();
+      $( "#accordion1" ).accordion({
+        collapsible: true,
+		
+        active: false
+      }
+                                 );
+      $( "#accordion1" ).accordion({
+        active: 3,
+        
+		} );
+                                
+	/*Sub accordian 2*/
+	$( "#accordion2" ).accordion();
+      $( "#accordion2" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion2" ).accordion({
+        active: 2 }
+                                 );
+	/*Sub accordian 2*/
+	$( "#accordion3" ).accordion();
+      $( "#accordion3" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion3" ).accordion({
+        active: 3 }
+                                 );
+	/*Sub accordian 2*/
+	$( "#accordion4" ).accordion();
+      $( "#accordion4" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion4" ).accordion({
+        active: 3 }
+                                 );
+ /*Sub accordian 2*/
+	$( "#accordion5" ).accordion();
+      $( "#accordion5" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion5" ).accordion({
+        active: 3 }
+                                 );
+	/*Sub accordian End*/
+	
+      $( "#accordion" ).accordion();
+      $( "#accordion" ).accordion({
+        collapsible: true,
+        active: false,
+		 
+      }
+                                 );
+$("#accordion .evenHeader,#accordion .oddHeader").bind("click",function(){
+
+$("#accordion .oddDiv").css( "height","auto" );
+$("#accordion .evenDiv").css( "height","auto" );
+});
+$("#accordion .oddDiv").css( "height","auto" );
+$("#accordion .evenDiv").css( "height","auto" );
+      $( "#accordion" ).accordion({
+       // active: 3,
+		}
+                                 );
+$("#cash").change(function() {
+    if(this.checked) {
+       $(".byCash").show(500);
+    }
+	else
+	{
+	  $(".byCash").hide(500);
+	}
+	
+});
+$("#cheque").change(function() {
+    if(this.checked) {
+       $(".byCheck").show(500);
+    }
+	else
+	{
+	  $(".byCheck").hide(500);
+	}
+	
+});
+
+/*Validation for Text box*/
+jQuery('.amount').keyup(function () { 
+
+var sumVal=0;
+    this.value = this.value.replace(/[^0-9\.]/g,'');
+	if(!$.isNumeric(this.value))
+	{
+		$(".validText").stop( true, true ).fadeIn(1000);
+		$(".validText").stop( true, true ).fadeOut(1000);
+	}
+	
+	
+	
+	jQuery('.amount').each(function(){
+	var id = $(this).closest("p").attr("id");
+	
+	sumVal+=id*this.value
+	});
+	$("#sumVal").val(sumVal);
+	if($("#sumVal").val()!=0)
+	$('.DepositSlip').show();
+	else
+	$('.DepositSlip').hide();
+	
+});
+
+
+	/*Click function for CeSign*/
+	$(".ceSign").bind('click',function(){
+	$("#popup").show();
+	});
+	$(".btn").bind('click',function(){
+	$("#popup").hide();
+	});							 
+      //var firstname =getQueryVariable("firstname");
+      var firstname ="ERIKA";
+	  // var lastName =getQueryVariable("lastname");
+	  var lastName ="SAMUELs";
+	  document.getElementById('clientname').innerHTML=firstname+'&nbsp'+lastName;
+    }
+     );
+   
+
+		function getQueryVariable(variable) {
+		  var query = window.location.search.substring(1);
+		  var vars = query.split("&");
+		  for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			if (pair[0] == variable) {
+			  return pair[1];
+			}
+		  } 
+		 
+		}
+    
+  </script>
+  
+  
+  
+  </head>
+  
+  <!--TIPS-->
+  <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+  
+  <body>
+    <header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						
+                        <li>
+                        	<a href="index.html">
+								<img src="img/SynovusLogoAll.png" alt="Synovus" title="Synovus" class="brand-icon" style="width:100%; height:100%;">
+							</a>
+                        </li>
+                    <!--
+                         <li>
+                        	<a href="index.html" class="navbar-brand">
+								<img src="img/SynovusBankLogo.png" alt="Synovus" title="Synovus" class="brand-icon">
+							</a>
+                        </li>-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+						<!--Language selector-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="dropdown">
+									<span class="help-line">
+                                    
+                                    <div class="searchbox">
+						<div class="input-group custom-search-form">
+							
+							<span class="input-group-btn">
+								<button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+                                
+							</span>
+                            <input type="text" class="form-control" >
+						</div>
+					</div>
+                                    
+                                    </span>
+					
+							
+						</li>
+                        
+                        <li class="dropdown">
+									<span class="help-line">1-855-877-0953</span>
+						
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End language selector-->
+
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						
+						
+						
+							
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+        <div id="clientname" class="header" style="display:none;">
+                       Welcome!ERIKA SAMUELS
+                      </div>
+                      
+                     <!--- <div id="clientname" class="header" style="text-align:center;">
+                     <span style="text-align:left; float:left; margin-left:0px;"> Welcome!ERIKA SAMUELS</span> <span style="margin-left:-50px">Application for: Synovus Preferred Account</span> &nbsp; &nbsp;<span style="font-size:12px;"><a href="SelectProduct.html"><u>Change Product</u></a></span>
+                      </div>--->
+                     <div id="clientname" class="header" style="text-align:center;">
+                      <span class="clientnameOffset" style="text-align:left;   left:10px;"> Welcome!ERIKA SAMUELS</span> <div class="OffsetVal">Application for: Synovus Preferred Account &nbsp; &nbsp;<span style="font-size:12px;"><a href="SelectProduct.html"><u>Change Product</u></a></span></div>
+                     </div>
+                      
+                      <hr style="margin:0px; padding:0px">
+                       <div id="clientname" class="header" style="text-align:left;">
+                       Let’s get started! <br />
+					<span style="font-size:16px;">*Completing your application is easy and won’t take more than a few minutes, if you’re a U.S. resident and at least 18 years old.</span>
+                      </div>
+                      
+                     <!-- <div id="clientname" class="header" style="text-align:center;">
+                       Let’s get started! <br />
+					Completing your application is easy and won’t take more than a few minutes, if you’re a U.S. resident and at least 18 years old.
+                      </div>-->
+              <!--===================================================-->
+              <!--END NAVBAR-->
+              <div id="container" class="effect mainnav-sm">
+                
+                <!--NAVBAR-->
+                <!--===================================================-->
+                
+                
+                <div class="boxed">
+                  
+                  <!--CONTENT CONTAINER-->
+                  <!--===================================================-->
+                  <div class="row">
+				  <div id="popup" style="display:none">
+					  <div id="popupContainer"  >
+						  <p style="font-size:22px; padding-left:10px">Adopt Your Signature</p>
+						  <p style="padding-left:10px">Confirm your name, initials and signature</p>
+						  <div style="padding-left:10px;width:270px;float:left"><p>Full Name</p><input style="padding:10px;"  type="text"value="Erika Samuels"></div>
+						  <div style="margin-left:60px;width:270px;float:left"><p>Initials</p><input style="padding:10px;"  type="text"value="ES"></div>
+						  <p style="clear:both"></p>
+						   <p style="padding-left:10px;clear:both"><span style="color:#ed1c24">Select Style </span>| Draw</p>
+						   <img style="height:101px;padding-left:10px;"src="images/digital_sign.jpg"/>
+						   <p style="padding-left:10px;clear:both"><u>Change Style</u></p>
+						   <p style="padding-left:10px;clear:both">By clicking Adopt and Sign, I agree that the signature and initials will be the electronic representation of my signature and initials for all purposes when I (or my agent) use them on documents, including legally binding contracts - just the same as pen-and-paper signature or initial.</p>
+						   <div><button style="margin-left:10px;background-color:#ed1c24;color:white" type="button" class="btn btn-default" >Adopt and Sign</button><button type="button" style="margin-left:30px;background-color:rgb(127, 127, 128)" class="btn btn-default">Cancel</button></div>
+					  </div>
+				  </div>
+                    <div class="panel custom-panel" style="margin-top:-20px;">
+                    <div id="content-container" class="col-md-9 col-lg-9">
+                      <div class="content-panel">
+                      <!--<div id="clientname" class="header">
+                       Welcome!ERIKA SAMUELS
+                      </div>-->
+					  
+                      
+                     <!-- <div id="clientname" class="header">
+                       Welcome!ERIKA SAMUELS
+                      </div>
+                      
+                      <div id="clientname" class="header">
+                       Welcome!ERIKA SAMUELS
+                      </div>
+                      -->
+                      
+					  	<div id="page-content">
+                    
+                    <!--Chat Widget-->
+							<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+							<div class="panel custom-panel">
+													
+								<!--Chat widget body-->
+								<div id="demo-chat-body" class="collapse in">
+									<div class="nano" style="height:400px;">
+										<div class="nano-content pad-all"  style="padding:20px 0px 20px 0px !important;">
+											<!--Clients Table-->
+											
+											<div class="accordionContainer" style="">
+                        <div id="accordion">
+                          <h3 class="oddHeader hideRequest">
+                             Customer Profile
+                            
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv" id="heightFallback">
+							
+								<div id="accordion1" >
+								
+									<h3 class="oddHeader">
+										Personal Information  
+										<span class="notification" style="color:#ed1c27; font-style:italic; font-weight:bold;"><img src="img/Camera.png" style="padding:2px 5px 2px 2px;">Click here to Upload State I.D for faster verication</span>										
+									</h3>
+									
+									<div class="oddDiv">
+										<p>Customer Name: &nbsp;&nbsp; <span><input type="text" class="infoTextbox"  value="Erika Samuals" ></span></p>
+										<p>Home Telephone: &nbsp;<span><input type="text" class="infoTextbox"  value="614-428-6022" ></span></p>
+										<p><div class="phone" >Work Telephone: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" class="infoTextbox"  value="614-428-3456" ></span></div> <div> Work Extension: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" class="infoTextbox"  value="5432" ></span></div></p>
+										<p>Mobile Number: &nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" class="infoTextbox"  value="614-555-1234" ></span></p>
+										<p>Email<span class="important">*</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span><input style="min-width:145px" type="text" class="emailTextbox"  value="ErikaSamuels@live.com" ></span></p>
+										<p>Would you like to receive periodic marketing promotions via email?<label><input type="radio" name="optradio">Yes</label> <label> <input type="radio" checked=true name="optradio">No</label></p>
+                                        
+                                        
+                                        <div class="howIdentify">
+                                        <h5>How we identify you?</h5> <br />
+                                        Synovus Bank, like all nancial
+										institutions, is required by law
+										to obtain, verify and record
+										information that identies each
+										customer that opens a bank
+										account with us.
+										When you open an account
+										with us, we will ask you for your
+										name, address and other information
+										that will allow us to
+										identify you.
+                                        
+                                        </div>
+                                        
+									</div>
+									<h3 class="evenHeader">
+										Employment/ School Information
+									</h3>
+									<div class="evenDiv" style="background-color:white">
+									<!--<p>- No Fee for Synovus Bank ATMs
+									- $3.00 for Non Synovus Bank ATMs located in the United States
+									- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+									outside of the 50 United States or District of Columbia</p>-->
+									</div>
+									<h3 class="oddHeader">
+										Relationship Information
+									</h3>
+									<div class="oddDiv">
+									<!--<p>- No Fee for Synovus Bank ATMs
+									- $3.00 for Non Synovus Bank ATMs located in the United States
+									- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+									outside of the 50 United States or District of Columbia</p>-->
+									</div>
+								
+							   </div>
+                          </div>
+                          <h3 class="evenHeader hideRequest">
+                            Product Information
+                           
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="evenDiv" >
+                            <p><input type="checkbox" checked=true id="MTCheck" value=""> <span style="font-size:15px;color:#ed1c27">Synovus Plus Checking</span><br><span style="font-style:italic;font-size:10px"><b>(Change Current Selection - <a href="#"><u>Click here</u></a>)</b></span></p>
+							
+							<p>Do you want to add another account?<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="optradio1">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label> <input type="radio" checked=true name="optradio1">No</label></p>
+							<p><span style="font-size:15px;color:#ed1c27">FEATURES</span></p>
+							<p>Minimum of $25 deposit required at account opening.</p>
+							<p>Monthly Maintenance Charge - $9.95</p>
+							<p>How to Avoid the Monthly Maintenance Charge -<br>Make one or more transactions per monthly service charge cycle, such as a deposit, withdrawal, a check, or any debit payments</p>
+							
+							<p>ATM Cash Withdrawal, Cash Advance or Electronic Funds Transfer -<br>- No Fee for Synovus Bank ATMs- $3.00 for Non Synovus Bank ATMs located in the United States- <br>- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+							outside of the 50 United States or District of Columbia</p>
+							<div style="background: linear-gradient(#ed1c24, #ae1721);padding:30px;margin-bottom:10px">
+							<p style="color:white">In addition to the optional services that we selected for you, we also offer:<br>- Deposit to Deposit Overdraft Protection<br>- Personal Credit Line Overdraft Protection<br>- Safe Deposit Box<br>- Check Image Statement</p>
+							<p style="color:white">Please contact Customer Service at 800-480-2265 if you would like to change your optional services after your account is opened.</p>
+							</div>
+							
+                          </div>
+                          <h3 class="oddHeader hideRequest">
+                            Supporting Documents
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv">
+						     <div id="screen1" >
+							  <div class="upload">
+								<div class="sdImage camera" >
+								 <div class="TextImage" >Take Photo*</div>
+								 </div>
+									  <div class="SDtext">
+										OR
+									  </div>
+								 <div class="sdImage uploadImg click" >
+								   <div class="TextImage" >Upload Document<br></div>
+								 </div>
+								  <div class="SDtext">
+									OR
+								  </div>
+								  <div class="sdImage uploadImg" >
+								  <div class="TextImage" >Upload Document<br><span class='italic'>(from Cloud)</span></div>
+								  </div>
+														  
+								</div>
+								
+								<div class="docUploaded">
+								  <span class="docIcon">
+								  </span>
+								  <span  style="font-weight:bold">
+									Documents to be uploaded 
+								  </span>
+								  <p>
+									<span class="checkIcon"></span>
+									  <span  style="font-style:italic">
+										Valid State ID<span style="color: red">*</span>
+									  </span>
+									<br>
+									 <span class="checkIcon"></span>
+									  <span  style="font-style:italic">
+										ID Proof 2<span style="color: red">*</span>
+									  </span>
+									  <br>
+									  
+									  <span  style="font-style:italic; font-size:10px;">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valid ID Proofs:
+									  </span>
+									  <br>
+									 
+									  <span  style="font-style:italic; font-size:10px;">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utility Bill
+									  </span>
+									 <br>
+									  
+									  <span  style="font-style:italic; font-size:10px;">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit Card Statement
+									  </span>
+									  <br>
+									  <span  style="font-style:italic; font-size:10px;">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Bill
+									  </span>										  
+								</div>
+                             </div>
+							 <div id="screen2" style="display:none">
+							<div class="upload" style="  border-right: 1px solid #ccc;">
+							 <span  style="font-weight:bold">
+							Please select the document(s) you want to submit </span>
+							<p class="documentVal" ><input type="checkbox" style="vertical-align: middle;margin-right:10px" id="MTCheck" value=""><span>Document 1</span><img style="padding-left:20px;"src="images/pdfIcon.png"/><span style="padding-left:20px;">Erika_ID.pdf</span></p>
+							<p class="documentVal" ><input type="checkbox" style="vertical-align: middle;margin-right:10px" id="MTCheck" value=""><span>Document 2</span></p>
+							<p class="documentVal" ><input type="checkbox" style="vertical-align: middle;margin-right:10px" id="MTCheck" value=""><span>Document 3</span></p>
+
+							</div>
+							<div class="docUploaded">
+							 <span class="docIcon">
+							</span>
+							<span  style="font-weight:bold">
+									Documents to be uploaded 
+						     </span>
+							  <p>
+							 <span class="checkIcon"></span>
+							<span  style="font-style:italic">
+							Document1-Erika_ID.pdf
+							  </span>
+							 </div>
+							<div class="buttonHolder">
+							<button class="uploadBtn"type="button">Upload</button> &nbsp;&nbsp;&nbsp;<button class="uploadBtn"type="button">Back</button>
+							</div>
+							 </div>
+                          </div>
+                          
+                          
+                          <h3 class="oddHeader hideRequest">
+                            Expected Account Activity
+							<span style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv" style="padding: 1em 0.7em;" >
+						 
+						  <div class="dropdown">
+						   <p class="dropdownText">Purpose of Account</p>
+
+							<select style="padding:5px">
+							<option>Secondary Transaction Account</option>
+								<option >Primary Transaction Account</option>
+								
+								<option>Tertiary Transaction Account</option>
+							</select>
+
+						  </div>
+						  
+						  <div class="dropdown">
+						  <p class="dropdownText">What is the primary method you will use to access yur account?</p>
+						  	<select style="padding:5px">
+							<option>Cash</option>
+								<option>Cheque</option>
+								
+								<option>Online Transaction</option>
+							</select>
+							<!--<button type="button" class="btn review">Review</button>-->
+						  </div>
+                           
+						  <div class="dropdown">
+						  <p class="dropdownText">Will you frequently use your account for any transactions outside of
+							the US (including wires, ATM, purchases or electronic withdrawals)?</p>
+							<select style="padding:5px">
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						  	<p class="dropdownText">What is the approximate number of transactions (include all deposits,
+							withdrawals and purchases) that will be processed through your account
+							monthly?</p>
+							<select style="padding:5px">
+								<option>Less than 50</option>
+								<option>Greater than 50</option>
+								<option>Equal to 50</option>
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						  	<p class="dropdownText">What is the approximate number of monetray instruments (Offcial Checks,
+							Money Orders or Travelers Checks) that will be purchased from or deposited
+							into this account monthly?</p>
+							<select style="padding:5px">
+							<option>None</option>
+								<option>Offcial Checks</option>
+								<option>Money Orders</option>
+								
+							</select>
+						  </div> 
+						   
+						  <div class="dropdown">
+						  <p class="dropdownText">For cash transactions, what is the approximate number df deposit,
+							payments or withdrawals/advances you will be making monthly?</p>
+							<select style="padding:5px">
+							<option>None</option>
+								<option>deposit</option>
+								<option>payments or withdrawals</option>
+								
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						    <p class="dropdownText">What is the approximate number of total wire transactions (incoming and
+							outgoing) you will be making in this account monthly?</p>
+							<select style="padding:5px">
+							<option>None</option>
+								<option>Incoming</option>
+								<option>Outgoing</option>
+								
+							</select>
+						  </div> 
+
+						  <div class="dropdown">
+						  <p class="dropdownText">What is the approximate number of preauthorized payments, withdrawals,
+							and deposits (ACH transactions) you will do in this account monthly?</p>
+							<select style="padding:5px">
+								<option>Less than 10</option>
+								<option>Greater than 10</option>
+								<option>Equal to 10</option>
+							</select>
+							
+						  </div> 
+
+						  <div class="dropdown">
+					    <p class="dropdownText">Will you be using your account for internet gaming and/or internet casino
+						transactions?</p>
+							<select style="padding:5px">
+							<option>No</option>
+								<option>internet gaming</option>
+								<option>internet casin</option>
+								
+							</select>
+	
+						  </div> 
+                          </div>
+                         <!-- <h3 class="oddHeader">
+                            Enhanced Due Diligence
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv">
+									<p>- No Fee for Synovus Bank ATMs
+									- $3.00 for Non Synovus Bank ATMs located in the United States
+									- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+									outside of the 50 United States or District of Columbia</p>
+                          </div>-->
+                          <h3 class="oddHeader hideRequest">
+                            Disclosures and Agreements
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="oddDiv">
+                            <p>Important information about procedures for opening a new account
+							To help the government fight the funding of terrorism and money laundering activities, federal law requires all financial institutions to
+							obtain, verify, and record information that identifies each person who opens an account.
+                            </p>
+                            <p>What this means for you: When you open an account, we may ask for your name, address, date of birth, and other information that will allow us to identify you. We may also ask for your driver's license number or other identifying information.
+                            </p>
+							<p>In order to open your account, you must first agree to the Consent for Electronic Disclosures ("E-consent"), and then agree to the Account Disclosures. Please read the full text of the E-consent and Account Disclosures.</p>
+							<div id="accordion5">
+							  <h3 class="evenHeader">
+								Capture Consent Using Electronic Signature
+
+							  </h3>
+							   <div class="evenDiv" style="font-size:13px">
+								  <div><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Account Terms and Conditions<span><img class="ceSign" style="cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Electronic Consent<span><img class="ceSign"  style="cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 3<span><img class="ceSign"  style="cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+									<div style="margin-top:10px;margin-bottom:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 4<span><img class="ceSign"  style="cursor:pointer"src="images/capture_electronic_sginature.jpg"/></div>
+							  </div>
+							  <h3 class="oddHeader">
+								Capture Consent Using Printed Disclosures
+
+							  </h3>
+							  <div class="oddDiv" style="font-size:13px">
+								<div><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Account Terms and Conditions<span><img class="print" style="cursor:pointer"src="images/printer_icon.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Electronic Consent<span><img class="print" style="cursor:pointer" src="images/printer_icon.jpg"/></div>
+									<div style="margin-top:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 3<span><img class="print" style="cursor:pointer" src="images/printer_icon.jpg"/></div>
+									<div style="margin-top:10px;margin-bottom:10px"><img style=";margin-right: 4px;"src="images/pdf_icon.jpg"/><span style="padding-top:10px;vertical-align: bottom;
+									height: 63px;">Document 4<span><img class="print" style="cursor:pointer" src="images/printer_icon.jpg"/></div>
+								</div>
+							</div>
+						
+							<!--<p>1. Please open and read the PDF containing the Consent for Electronic Disclosure. Consent for Electronic Disclosure</p>
+							<p>2. Read the following statement and check the box.</p>
+							<p><input type="checkbox" checked=true  value="">I have opened, reviewed and agree to the Consent for Electronic Disclosure..</p>
+							<p>3. Please open and read the PDF containing the Account Disclosures. Account Disclosures</p>
+							<p>4. Read the following statement and check the box.</p>
+							<p><input type="checkbox" checked=true  value="">I read and are willing to agree to the Account Disclosures..</p>
+							<div style="background-color:#EEEFEF;font-size:14px;padding:7px"><p style="color:grey"><b>Taxpayer Identification Number Certification</b></p></div>
+							<p>By law, the IRS requires you to certify the following three statements regarding your tax status, under penalties of perjury:</p>
+							<p>1. The Taxpayer Identification Number(TIN) or Social Security Number given is correct; and</p>
+							<p>2. I am not subject to backup withholding; and</p>
+							<p>3. I am a U.S. Citizen or U.S. Permanent Resident.</p>
+							<p><input type="radio" name="optradio2">I agree with the statements above</p>
+							<p><input type="radio" checked=true  name="optradio2">At least one of the statements above is true. If you select this option, Synovus must withhold 28% of all interest payments earned on the account.Synovus will forward &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this backup withholding to the IRS.</p>
+							<p></p>-->
+                          </div>
+                          
+                          <h3 class="evenHeader hideRequest">
+                            Fund Account
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="evenDiv">
+                         	<div id="accordion3">
+								<h3 class="oddHeader">
+									Fund Account Instantly
+								</h3>
+								<div class="oddDiv">
+								
+                                
+                                
+                                
+                                <p><input type="checkbox" class="evenHeader" id="cheque"  style="margin-right:10px" id="MTCheck" value="">By Check(using Device Camera)</p>
+										<div class="byCheck" style="display:none">
+										  <div class="upload" style="width: 100%; padding-bottom:3%;">
+											<div class="sdImage camera" >
+											 <div class="TextImage" style="padding-top: 57px;" >Camera<br><span class='italic'>(Capture Check Details<br>using Device Camera)</span></div>
+											 </div>
+											  <div class="text">
+												OR
+											  </div>
+												  <div class="sdImage uploadImg" >
+												  <div class="TextImage" style="padding-top: 57px;" >Scan Check<br><span class='italic'>(Capture Check Details<br>using attached Scanner)</span></div>
+												  </div>  
+											</div>
+										</div>
+                                
+                                
+                                                       
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+										<p><input type="checkbox" class="evenHeader" id="cash"  style="margin-right:10px; padding-top:20px;" id="MTCheck" value="">By Credit or Debit Card<span class="validText" style="float:right;color:red;display:none">Please fill the texbox with number*</span></p>
+										
+
+<p><input type="checkbox" class="evenHeader" id="cash"  style="margin-right:10px; padding-top:20px;" id="MTCheck" value="">By ACH</p>
+										
+									  
+									
+									
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+								</div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+								<h3 class="evenHeader hideRequest" >
+									Fund Account Later
+								</h3>
+								<div class="evenDiv" style="background-color:white">
+								<p><input type="checkbox" style="margin-right:10px" id="MTCheck" value="">By Mail<button type="button" style="position:absolute;right:52px;" class="btn review">Print</button></p>
+								<p style="padding:10px 0px"><input type="checkbox" style="margin-right:10px" id="MTCheck" value="">By Electronic Transfer<button style="position:absolute;right:52px;" type="button" class="btn review">Print</button></p>
+								</div>
+								
+					     	</div>   
+                          </div>
+						  <h3 class="oddHeader hideRequest">
+                            Account Confirmation
+							<!--<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>-->
+                          </h3>
+                          <div class="oddDiv">
+							<p><span style="font-size:15px;color:#ed1c24">Synovus Plus Checking</span><span class="accountNumber">Account Number: 80024362 | Customer ID: 128975</span></p>
+							<p><span style="font-size:15px;color:#ed1c24">FEATURES</span></p>
+							<p>Minimum of $25 deposit required at account opening.</p>
+							<p>Monthly Maintenance Charge - $9.95</p>
+							<p>How to Avoid the Monthly Maintenance Charge -<br>
+							Make one or more transactions per monthly service charge cycle, such as a deposit, withdrawal, a check, or any debit payments</p>
+							<p>ATM Cash Withdrawal, Cash Advance or Electronic Funds Transfer -<br>- $3.00 for Non Synovus Bank ATMs located in the United States<br>- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located outside of the 50 United States or District of Columbia</p>
+
+							<div style="background: linear-gradient(#ed1c24, #ae1721);padding:30px;margin-bottom:10px">
+								<p style="color:white">In addition to the optional services that we selected for you, we also offer:<br>- Deposit to Deposit Overdraft Protection<br>- Personal Credit Line Overdraft Protection<br>- Safe Deposit Box<br>- Check Image Statement<br><br>Please contact Customer Service at 800-480-2265 if you would like to change your optional services after your account is opened.</p>
+
+							</div>
+                          </div>
+						   <h3 class="evenHeader clickCustomize">
+                            Account Customization
+							<span  style="position:absolute;right:10px;font-style:italic">
+                              Edit
+                            </span>
+                          </h3>
+                          <div class="evenDiv">
+							<div id="accordion2">
+								<h3 class="oddHeader">
+									Recommendation Engine
+								</h3>
+								<div class="oddDiv">
+									<p>Based on your profile, Synovus is pleased to offer you a MyChoice Money Market Account with following features:</p>
+									<ul>
+									<li>Competitive tiered interest rates</li>
+									<li>Premium interest rates available2</li>
+									<li>No monthly maintenance charge if you have a MyChoice Premium Checking, Power Checking or Portfolio Management Account or when you keep a minimum daily balance of $2,5003</li>
+									<li>$15 monthly maintenance charge unless one of the above requirements is met</li>
+									</ul>
+									<p>Would you like to enroll?<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="optradio4">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label> <input type="radio" checked=true name="optradio4">No</label></p>
+								</div>
+								<!--<h3 class="evenHeader">
+									Ability to Customize Card
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for Synovus Bank ATMs
+								- $3.00 for Non Synovus Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>-->
+								<h3 class="evenHeader">
+									Add ATM Pin
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for Synovus Bank ATMs
+								- $3.00 for Non Synovus Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+								<h3 class="oddHeader">
+									Choose Card Design
+								</h3>
+
+								<div class="oddDiv">
+								<div class="cardHeader" >1) Purchase Perks® Visa® Platinum</div>
+								<input style="margin-left: -11px;" type="radio" checked=true   class="imageRadioBtn" name="optradio5"><img  class="imageborder" src="img/SynovusCard1.png" style="height: 120px;margin-left: 13px; " alt="card" title="Card"/>
+                                
+                                
+                                <div class="rightCardTxt">
+                                
+                                <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										Earn points towards travel and shopping rewards
+									  </span>
+									<br>
+									 <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										No fee for rst year of Purchase Perks® membership
+									  </span>
+									  <br>
+                                 <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										$0 introductory annual fee for rst year; after that,$50 annual fee for Purchase Perks <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Premier or $12 annual fee for Purchase Perks Basic
+									  </span>
+									  <br>
+                                      
+                                       <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										Combine points earned on all eligible credit cards
+									  </span>
+									  <br><br>
+                                      <div class="learnMore"><a href="#" style="color:#fff;">Learn More</a></div>
+                                
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+								<p class="orTextDesign" style="text-align:left"><u>OR</u></p>
+								<div class="cardHeader" >2) Cash Rewards Visa Platinum</div>
+								<div><input style="margin-left: -11px;"  type="radio" class="imageRadioBtn" name="optradio5"><img class="imageborder" src="img/SynovusCard2.png" style="height: 120px;margin-left: 13px; margin-right:3px; " alt="card" title="Card"/></div>
+                                
+                                <div class="rightCardTxt">
+                                
+                                <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										Up to $400 in cash rewards per year
+									  </span>
+									<br>
+									 <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										No Annual Fee
+									  </span>
+									  
+									  <br><br>
+                                      <div class="learnMore"><a href="#" style="color:#fff;">Learn More</a></div>
+                                
+                                </div>
+                                
+                                
+                                <br />
+                                <p>
+                                <div class="cardHeader" >3) Cash Rewards Visa Platinum</div>
+								<div><input style="margin-left: -11px;"  type="radio" class="imageRadioBtn" name="optradio5"><img class="imageborder" src="img/SynovusCard3.png" style="height: 120px;margin-left: 13px;" alt="card" title="Card"/></div>
+                                
+                                
+                                <div class="rightCardTxt">
+                                
+                                <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										Worldwide acceptance
+									  </span>
+									<br>
+									 <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										No Annual Fee
+									  </span>
+                                      <br>
+									  <span class="checkIcon"></span>
+									  <span  style="font-style:italic; font-size:10px;">
+										Purchase Protection and other Visa® benets included
+									  </span>
+									  <br><br>
+                                      <div class="learnMore"><a href="#" style="color:#fff;">Learn More</a></div>
+                                
+                                </div>
+                                
+                                
+                                
+								
+								<p class="orTextDesign" style="text-align:left"><u>OR</u></p>
+								<div class="cardHeader" >3) Customize your card with your own picture</div>
+								 <div class="upload1">
+								<div class="sdImage camera" >
+								 <div class="TextImage" >Take Photo*</div>
+								 </div>
+									  <div class="SDtext1">
+										OR
+									  </div>
+								 <div class="sdImage uploadImg" >
+								   <div class="TextImage" >Upload Photo<br><span class='italic'>(from Scanner)</span></div>
+								 </div>
+								  <div class="SDtext1">
+									OR
+								  </div>
+								  <div class="sdImage uploadImg" >
+								  <div class="TextImage" >Upload Photo<br><span class='italic'>(from Cloud)</span></div>
+								  </div>
+								<div >
+								<p style="clear: both">*Please make sure the Web Cam is connected in case not using the device camera.</p>	</div>							  
+								</div>
+								
+								</div>
+								<h3 class="evenHeader">
+									Enrollment in Bill Pay
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for Synovus Bank ATMs
+								- $3.00 for Non Synovus Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+								<h3 class="oddHeader">
+									Enrollment in Online Banking
+								</h3>
+								<div class="oddDiv">
+								<p>- No Fee for Synovus Bank ATMs
+								- $3.00 for Non Synovus Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+    							<h3 class="evenHeader">
+									Order Checks
+								</h3>
+								<div class="evenDiv">
+								<p>- No Fee for Synovus Bank ATMs
+								- $3.00 for Non Synovus Bank ATMs located in the United States
+								- The greater of $5.00 or 3% of the U.S. dollar amount of the transaction for withdrawals and cash advances if the ATM is located
+								outside of the 50 United States or District of Columbia</p>
+								</div>
+					     	</div>   
+                          </div>
+
+                        </div>
+                        
+                       
+                       
+                         <div>
+                          <button class="doneButton"type="button" data-toggle="modal" data-target="#myModal">
+                            Done
+                          </button>
+                        </div>
+                        
+                       
+                      </div>
+			 
+             
+						
+											
+										</div>
+									</div>
+
+							
+								</div>
+							</div>
+							<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+							<!--End Chat Widget-->
+					<div class="row">
+					
+					<!--<div class="donebtn" style="margin:20px; float:right;"><a href="#" style="color:#fff;">Done</a></div>-->
+
+					</div>
+					
+				
+				</div>
+				
+				
+					 
+				</div>
+			</div>
+
+		</div>
+                    <!--===================================================-->
+                    <!--END CONTENT CONTAINER-->
+                    	<div id="panel" class="col-lg-3 col-md-3 col-sm-12 right-panel" style="height:420px; margin-bottom:30px;">
+                	<div class="page-title">
+					
+                   
+                   
+                   
+                   <div class="right_cal_content">
+                    	
+						
+                    		<div class="right_cal" style="font-size:16px;padding:0px; background-color:#fff; padding-top:15px;"><span class="pull-left">Video Chat with us right now! </span></div>
+                  
+                  <a href="#"><img src="img/VCall.png" title="Video Chat" style="padding:15px;" /></a>
+                  
+                  <hr>
+             
+                  
+				    </div>
+                   
+                   
+                   
+			         
+                    <div class="right_cal_content hideCoutomize">
+                    	
+						
+                    <table class="table table-striped right_quicklink" style="text-align:justify !important;">
+                        <tr><td><h4 style="margin-top:-10px;">Upcoming in the Next Section</h4></td></tr>
+                        <tr><td style="font-size:12px !important;">Lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. Donec odio. Quisque volut
+mattis eros. Nullam malesuada erat ut turp
+Suspendisse urna nibh, viverra non, semp
+suscipit, posuere a, pede. <p></p>
+
+<li>Lorem ipsum dolor sit amet, consectetuer
+adipiscing elit.</li>
+<li>Aliquam tincidunt mauris eu risus.</li>
+<li>Vestibulum auctor dapibus neque.</li>
+
+</td></tr>
+                       
+                        </table>
+                  
+					
+				  
+                   
+                    
+                    
+                    
+                    </div>
+					<div class="right_cal_content showCoutomize" style="display:none">
+					             <div class="requestIdf" style="text-align:left !important;">
+                                        <h5><b>Request Card Terms</b></h5> <br />
+                                        If you already have a personal credit card
+										with us, you can receive the terms of your
+										card upon request. You can call us at
+										1-800-543-8227 or make your request in
+										writing to:<br/><br/>
+                                        Card Services<br/>
+										P.O. Box 23061<br/>
+										Columbus, GA 31902-3061
+                                     </div>
+						</div>
+				</div>
+		</div>
+
+          </div>
+          
+          <!--MAIN NAVIGATION-->
+          <!--===================================================-->
+          
+          
+          
+          
+          <!--<nav id="mainnav-container">
+            <div id="mainnav">
+              
+         
+              <div id="mainnav-menu-wrap">
+						<div class="nano">
+							<div class="nano-content">
+								<ul id="mainnav-menu" class="list-group">
+						
+								
+									<li>
+                                    <div class="tgl-menu-btn">
+                                            <a class="mainnav-toggle" href="#">
+                                                <i class="menu-icon"></i>
+													<span class="menu-title menu-head">
+													<strong>Menu</strong>
+													</span>
+                                            </a>
+                                        </div>
+                                    </li>
+										
+							
+									<li>
+										<a href="index.html">
+											<i class="dashboard-icon"></i>
+											<span class="menu-title">
+												<strong>Dashboard</strong>
+											
+											</span>
+										</a>
+									</li>
+									
+									<li  class="active-sub">
+										<a href="clients.html">
+											<i class="clients-icon"></i>
+											<span class="menu-title">
+												<strong>Clients</strong>
+											</span>
+										</a>
+									</li>
+
+									<li>
+										<a href="widgets.html">
+											<i class="loan-icon"></i>
+											<span class="menu-title">
+												<strong>Retails Loans</strong>
+											</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+									
+										<ul class="collapse">
+											<li><a href="#">Term, Mortgage, Hire/Purchase </a></li>
+											<li><a href="#">Loan Origination </a></li>
+											<li><a href="#">Loan Booking & Release </a></li>
+											<li><a href="#">Loan Monitoring </a></li>
+											<li><a href="#">Documents Monitoring </a></li>
+											<li><a href="#">Post Dated Cheques Monitoring </a></li>
+											<li><a href="#">Loans Accounting & Reporting</a></li>
+										</ul>
+									</li>
+									
+                                    
+									<li>
+										<a href="#">
+											<i class="deposit-icon"></i>
+											<span class="menu-title">Retails Deposits</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+										
+										<ul class="collapse">
+											<li><a href="#">Savings, Current & Fixed Deposits</a></li>
+											<li><a href="#">Accounts Opening & Closure</a></li>
+											<li><a href="#">Cheque Management </a></li>
+											<li><a href="#">Deposit Accounting & Reporting</a></li>
+										</ul>
+									</li>
+								
+									
+									
+									<li>
+										<a href="#">
+											<i class="transfer-icon"></i>
+											<span class="menu-title">Funds Transfer</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+									
+										<ul class="collapse">
+											<li><a href="#">Inter-Branch </a></li>
+											<li><a href="#">Remittance (TT, DD, TC, etc)</a></li>
+											
+										</ul>
+									</li>
+								
+                                
+									<li>
+										<a href="tables.html">
+											<i class="product-icon"></i>
+											<span class="menu-title">Products Catalog</span>
+										</a>
+									</li>
+						
+									
+									<li>
+										<a href="charts.html">
+											<i class="interest-icon"></i>
+											<span class="menu-title">Interest, Fees and Commissions</span>
+										</a>
+									</li>
+
+									
+								
+									<li>
+										<a href="#">
+											<i class="operational-icon"></i>
+											<span class="menu-title">Operational and Management Reports</span>
+											<i class="fa arrow"></i>
+										</a>
+						
+									
+										<ul class="collapse">
+											<li><a href="#">Day/Month/Quarter/Year </a></li>
+											<li><a href="#">Ad hoc Reports</a></li>
+											
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+        
+              
+            </div>
+          </nav>-->
+          
+          
+          
+          
+          <!--===================================================-->
+          <!--END MAIN NAVIGATION-->
+          
+          
+          <!-- FOOTER -->
+          <!--===================================================-->
+          
+          
+          
+          <!-- SCROLL TOP BUTTON -->
+          <!--===================================================-->
+          <button id="scroll-top" class="btn">
+            <i class="fa fa-chevron-up">
+            </i>
+          </button>
+          <!--===================================================-->
+          
+          
+          
+      </div>
+      <!--===================================================-->
+      <!-- END OF CONTAINER -->
+      
+      
+              </div>
+			             <footer class="footerBar" style="margin-top:5px; width:102%;clear:both">
+        <div class="container" style="width:100%;">
+        	<div class="col-md-7">
+            <p style="padding:10px 0px 0px -20px;font-size:13px;color:#fff">2015 Synovus Bank, Member FDIC and Equal Housing Lender All rights reserved.</p></div>
+            <div class="col-md-5">
+             <ul class="list-inline text-center footer-link" style="padding-top:12px;color:#fff;float:right;">
+            <li><a href="">Terms &amp; Conditions</a> |</li>
+            <li><a href="">Privacy policies</a> |</li>
+            <li><a href="">Safety &amp; Security</a> |</li>
+            <li><a href="">Site Map</a></li>
+            </ul>
+            </div>
+        </div>
+      </footer>
+              
+  </div>
+  <!--===================================================-->
+  <!-- END SETTINGS -->
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Please let us know which of the following best applies to you</h4>
+      </div>
+      <div class="modal-body gen-from from-block">       
+         <div class="radio">
+			<label class="form-radio form-normal">
+            <input type="radio" id="newCustomer" name="optionsRadios" value="option1">
+            New Customer
+            </label>          
+        </div>
+        <div class="radio">
+          <label class="form-radio form-normal">
+            <input type="radio" name="optionsRadios" id="existingCustomer" value="option2">
+             Existing Customer
+          </label>
+        </div>
+        <div class="radio">
+          <label class="form-radio form-normal">
+            <input type="radio" name="optionsRadios" id="resumeApplication" value="option3" >
+            Resume Application  </label>
+        </div>
+              <div class="radio">
+          <label class="form-radio form-normal">
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option4">
+            Shedule an Appointment </label>
+        </div>
+              </div>
+      <div class="modal-body newcustomer-from" style="display:none">       
+      	<div class="radio">
+          <label class="form-radio form-normal newcustomer">
+            <input type="radio" name="optionsRadios" id="newcustomer" value="option1">
+           New Customer
+          </label>
+        </div>
+        <p>By clicking Continue, I agree that the signature and initials will be the electronic representation of my signature and
+initials for all purposes when I (or my agent) use them on documents, including legally binding contracts - just the same
+as pen-and-paper signature or initial. </p>
+
+        <form class="form-inline">
+          <div class="form-group">
+           
+            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Username">
+          </div>
+          <div class="form-group">
+           
+            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+          </div>
+           <div class="form-group">
+          
+            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Email Address">
+          </div>
+          <div class="row">
+           <div class="col-md-4 padd-top">
+           <div class="form-group">
+          
+            <a href="SelectProduct.html" class="btn btn-danger gradient-bg">Continue</a>
+          </div>
+           </div>
+         </div>
+        </form>
+        <p class="padd-top">If you need any further infomation please <a href="#"><i>Click Here</i></a> to learn more.</p>
+      </div>
+      
+      <div class="modal-body existingcustomer-form" style="display:none">  
+    	<div class="radio">
+          <label class="form-radio form-normal existingcustomer">
+            <input type="radio" name="optionsRadios" id="existingCustomer" value="option2" checked/>
+             Existing Customer
+          </label>
+        </div>
+        <p>Please sign in with your Online Banking credentials</p>
+         <form class="form-inline">
+          <div class="form-group">
+           
+            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Username">
+          </div>
+          <div class="form-group">
+           
+            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+          </div>
+           
+          <div class="row">
+           <div class="col-md-4 padd-top">
+           <div class="form-group">
+          
+            <button type="submit" class="btn btn-danger gradient-bg">Sign In</button>
+          </div>
+           </div>
+         </div>
+        </form>
+        <p>Dont have an online banking account yet? <a href="#" style="color:#F00">Sign Up!</a></p>
+      </div>
+      
+      <div class="modal-body resumeapplication-form" style="display:none">  
+     <div class="radio">
+          <label class="form-radio form-normal resumeapplication">
+            <input type="radio" name="optionsRadios" id="resumeApplication" value="option3" checked>
+            Resume Application  </label>
+        </div>
+        <p>Please enter the Reference Number that was sent to your email address on le when you left the application earlier</p>
+         <form class="form-inline">
+          <div class="form-group">
+           
+            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Reference Number">
+          </div>
+         
+          <div class="row">
+           <div class="col-md-4 padd-top">
+           <div class="form-group" style="width:300px;">
+          
+            <button type="submit" class="btn btn-danger gradient-bg">Learn More</button>
+             <a href="Resume_Application.html" class="btn btn-danger gradient-bg">Continue</a>
+            <!-- <button type="submit" class="btn btn-danger gradient-bg">Continue</button>-->
+          </div>
+           </div>
+         </div>
+        </form>
+        <p>Lost your reference number?<span style="color:#F00"> Call Customer Care on 1-855-877-0953</span></p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+  					 <!-- FOOTER -->
+          <!--===================================================-->
+          
+
+ <!-- popup ends -->
+ 
+  <!--=================================================-->
+  
+  <!--jQuery [ REQUIRED ]-->
+  
+  
+  
+  <!--BootstrapJS [ RECOMMENDED ]-->
+  <script src="js/bootstrap.min.js">
+  </script>
+  
+  
+  <!-- Plugins [ OPTIONAL ]-->
+  <script src="js/plugins.min.js">
+  </script>
+  
+  
+  <!--Demo script [ DEMONSTRATION ]-->
+  <script src="js/demo/demo.min.js">
+  </script>
+  
+  
+  <!--Specify page [ SAMPLE ]-->
+  <script src="js/demo/dashboard.js">
+  </script>
+
+  <script>
+	$(function() {
+    var today = new Date();
+    var curr_date = today.getDate();
+    var curr_month = today.getMonth();
+    var day = today.getDay();
+    var curr_year = today.getFullYear();
+    var m_names = new Array("January", "February", "March",
+        "April", "May", "June", "July", "August", "September",
+        "October", "November", "December");
+    var d_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+    document.getElementById('dateField').innerHTML = d_names[day] + ' , ' + m_names[curr_month] + " " + curr_date + 'th';
+    var hours = today.getHours();
+    hours = hours + 1;
+    var minutes = today.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var remainingMinutes = 60 - minutes;
+    document.getElementById('next0').innerHTML = hours + " " + ampm;
+    document.getElementById('next1').innerHTML = hours + 1 + " " + ampm;
+    document.getElementById('next2').innerHTML = hours + 2 + " " + ampm;
+    document.getElementById('next3').innerHTML = hours + 3 + " " + ampm;
+    document.getElementById('next4').innerHTML = hours + 4 + " " + ampm;
+    document.getElementById('next5').innerHTML = hours + 5 + " " + ampm;
+    document.getElementById('appointment').innerHTML = hours + " " + ampm + '&nbsp;';
+    var input = remainingMinutes * 60;
+
+    function calculateTime(timer) {
+        var timer = timer;
+        var mins = Math.floor(timer / 60);
+        var secs = timer % 60;
+        var time = (mins < 10 ? "0" : "") + mins + ":" + (secs < 10 ? "0" : "") + secs;
+        return time;
+    };
+
+    setInterval(function() {
+        data = calculateTime(input)
+        if (input > 0) {
+            $("#updateTimer").text(data + ' Mins');
+            input--;
+        } else {
+            $("#updateTimer").text("Time Out")
+        }
+
+    }, 1000);
+
+});
+$("#newCustomer").click(function(){
+			$(".gen-from").hide();
+			$(".newcustomer-from").show();
+			$(".newcustomer").addClass("active");
+		});
+		$("#existingCustomer").click(function(){
+			$(".gen-from").hide();
+			$(".newcustomer-from").hide();
+			$(".existingcustomer-form").show();
+			$(".existingcustomer").addClass("active");			
+		});
+		$("#resumeApplication").click(function(){
+			$(".gen-from").hide();
+			$(".newcustomer-from").hide();
+			$(".existingcustomer-form").hide();
+			$(".resumeapplication-form").show();
+			$(".resumeapplication").addClass("active");	
+		});
+		$(".gen-from").show();
+	
+		$(".close").click(function(){
+		  location.reload();
+		});
+
+  </script>
+  </body>
+  
+  
+  </html>
+  

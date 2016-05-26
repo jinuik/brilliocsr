@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+   Synovus - New Customer
+  </title>
+  
+  
+  <link rel="stylesheet" href="css/jquery-ui.css">
+   <!--JAVASCRIPT-->
+  <script src="js/jquery-2.1.1.min.js">
+  </script>
+  <script src="js/jquery-ui.js">
+  </script>
+  
+
+  <!--=================================================-->
+  
+  <!--Sans pro Font [ OPTIONAL ]-->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!--Bootstrap Stylesheet [ REQUIRED ]-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  
+  <!--Stylesheet [ REQUIRED ]-->
+  <link href="css/demo.min.css" rel="stylesheet">
+  <link href="css/layout.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/client-details.css">
+  <!--STYLESHEET-->
+  <!--SCRIPT-->
+  <!--=================================================-->
+  
+  <!--Page Load Progress Bar [ OPTIONAL ]-->
+  <link href="plugins/pace/pace.min.css" rel="stylesheet">
+  <script src="plugins/pace/pace.min.js">
+  </script>
+  
+  
+  
+  <script>
+    $(function() {
+	/*Sub accordian 1*/
+	$( "#accordion1" ).accordion();
+      $( "#accordion1" ).accordion({
+        collapsible: true,
+		
+        active: false
+      }
+                                 );
+      $( "#accordion1" ).accordion({
+        active: 3,
+        
+		} );
+                                
+	/*Sub accordian 2*/
+	$( "#accordion2" ).accordion();
+      $( "#accordion2" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion2" ).accordion({
+        active: 2 }
+                                 );
+	/*Sub accordian 2*/
+	$( "#accordion3" ).accordion();
+      $( "#accordion3" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion3" ).accordion({
+        active: 3 }
+                                 );
+	/*Sub accordian 2*/
+	$( "#accordion4" ).accordion();
+      $( "#accordion4" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion4" ).accordion({
+        active: 3 }
+                                 );
+ /*Sub accordian 2*/
+	$( "#accordion5" ).accordion();
+      $( "#accordion5" ).accordion({
+        collapsible: true,
+        active: false
+      }
+                                 );
+      $( "#accordion5" ).accordion({
+        active: 3 }
+                                 );
+	/*Sub accordian End*/
+	
+      $( "#accordion" ).accordion();
+      $( "#accordion" ).accordion({
+        collapsible: true,
+        active: false,
+		 
+      }
+                                 );
+$("#accordion .evenHeader,#accordion .oddHeader").bind("click",function(){
+
+$("#accordion .oddDiv").css( "height","auto" );
+$("#accordion .evenDiv").css( "height","auto" );
+});
+$("#accordion .oddDiv").css( "height","auto" );
+$("#accordion .evenDiv").css( "height","auto" );
+      $( "#accordion" ).accordion({
+       // active: 3,
+		}
+                                 );
+$("#cash").change(function() {
+    if(this.checked) {
+       $(".byCash").show(500);
+    }
+	else
+	{
+	  $(".byCash").hide(500);
+	}
+	
+});
+$("#cheque").change(function() {
+    if(this.checked) {
+       $(".byCheck").show(500);
+    }
+	else
+	{
+	  $(".byCheck").hide(500);
+	}
+	
+});
+
+/*Validation for Text box*/
+jQuery('.amount').keyup(function () { 
+
+var sumVal=0;
+    this.value = this.value.replace(/[^0-9\.]/g,'');
+	if(!$.isNumeric(this.value))
+	{
+		$(".validText").stop( true, true ).fadeIn(1000);
+		$(".validText").stop( true, true ).fadeOut(1000);
+	}
+	
+	
+	
+	jQuery('.amount').each(function(){
+	var id = $(this).closest("p").attr("id");
+	
+	sumVal+=id*this.value
+	});
+	$("#sumVal").val(sumVal);
+	if($("#sumVal").val()!=0)
+	$('.DepositSlip').show();
+	else
+	$('.DepositSlip').hide();
+	
+});
+
+
+	/*Click function for CeSign*/
+	$(".ceSign").bind('click',function(){
+	$("#popup").show();
+	});
+	$(".btn").bind('click',function(){
+	$("#popup").hide();
+	});							 
+      //var firstname =getQueryVariable("firstname");
+      var firstname ="ERIKA";
+	  // var lastName =getQueryVariable("lastname");
+	  var lastName ="SAMUELs";
+	  document.getElementById('clientname').innerHTML=firstname+'&nbsp'+lastName;
+    }
+     );
+   
+
+		function getQueryVariable(variable) {
+		  var query = window.location.search.substring(1);
+		  var vars = query.split("&");
+		  for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			if (pair[0] == variable) {
+			  return pair[1];
+			}
+		  } 
+		 
+		}
+    
+  </script>
+  
+  
+  
+  </head>
+  
+  <!--TIPS-->
+  <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+  
+  <body>
+    <header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						
+                        <li>
+                        	<a href="index.html">
+								<img src="img/SynovusLogoAll.png" alt="Synovus" title="Synovus" class="brand-icon" style="width:100%; height:100%;">
+							</a>
+                        </li>
+                    <!--
+                         <li>
+                        	<a href="index.html" class="navbar-brand">
+								<img src="img/SynovusBankLogo.png" alt="Synovus" title="Synovus" class="brand-icon">
+							</a>
+                        </li>-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+						<!--Language selector-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="dropdown">
+									<span class="help-line">
+                                    
+                                    <div class="searchbox">
+						<div class="input-group custom-search-form">
+							
+							<span class="input-group-btn">
+								<button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+                                
+							</span>
+                            <input type="text" class="form-control" >
+						</div>
+					</div>
+                                    
+                                    </span>
+					
+							
+						</li>
+                        
+                        <li class="dropdown">
+									<span class="help-line">1-855-877-0953</span>
+						
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End language selector-->
+
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						
+						
+						
+							
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+    
+                      
+              <div class="row" style="margin-right:0px">
+			  
+                      
+                <!--CONTENT CONTAINER-->
+       			<div class="col-md-2 decrease-padd">
+               	 <div class="col-md-12 gradient-bg decrease-padd text-center"> <a href="#">mobile Banking</a></div>               
+                </div>  
+                <div class="col-md-2 decrease-padd"> 
+                    <div class="col-md-12 gradient-bg decrease-padd text-center"> <a href="#">Credit Card</a></div>
+                </div>              
+                <div class="col-md-2 decrease-padd">
+                	<div class="col-md-12 gradient-bg decrease-padd text-center"><a href="#">Loans</a></div>
+                </div>              
+                <div class="col-md-2 decrease-padd">
+                	<div class="col-md-12 gradient-bg decrease-padd text-center"><a href="#">Online Banking</a></div>
+                </div>              
+                <div class="col-md-2  decrease-padd">
+               	 <div class="col-md-12 gradient-bg decrease-padd text-center"><a href="#">Open an Account</a></div>
+                </div>              
+                      
+             </div>
+              <!--END NAVBAR-->
+              <div id="container">
+               
+	      <div class="row padd-top">
+            <div class="col-md-12">
+            	<div class="col-md-3"><p><h5>Find a Synovus ATM or branch near you:</h5></p></div>
+                
+                <div class="col-md-4"><input type="text" class="form-control" placeholder="Please enter a ZIP code, or an address, city and state. Search"/></div>
+                <div class="col-md-1"><button type="submit" class="btn btn-denger gradient-bg searchBtn" style="color:#fff;">Search</button></div>
+                <div class="col-md-2"> <h4> <a href="#">Advanced Search</a></h4></div>
+                </div>
+                
+                <div class="col-md-12">
+                                <div class="col-md-12">
+
+                <p><h5>We’ve found 20 locations based on your Current Location<br><br>
+                Click on a location below to see more information including hours and services.<h5></p>
+                	</div>
+                </div>
+            </div>
+      	<div class="row">
+        	<div class="col-md-12">
+            	<div class="col-md-6">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Downtown St. Petersburg</h4>
+                        <p class="list-group-item-text">
+                        Synovus Bank <span class="text-right pull-right" style="display:inline-block">0.20 Miles</span><br>
+                        333 3rd Avenue North<br>
+                        St. Petersburg ,FL 33701<br><br>
+                        Tel. No.: 888-317-0085<br><br>
+						Drive Up, Mortgage, Brokerage, Trust, Insurance
+                        </p>
+                      </a>
+                    </div>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Downtown St. Petersburg</h4>
+                        <p class="list-group-item-text">
+                        Synovus Bank <span class="text-right pull-right" style="display:inline-block">0.20 Miles</span><br>
+                        333 3rd Avenue North<br>
+                        St. Petersburg ,FL 33701<br><br>
+                        Tel. No.: 888-317-0085<br><br>
+						Drive Up, Mortgage, Brokerage, Trust, Insurance
+                        </p>
+                      </a>
+                    </div>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Downtown St. Petersburg</h4>
+                        <p class="list-group-item-text">
+                        Synovus Bank <span class="text-right pull-right" style="display:inline-block">0.20 Miles</span><br>
+                        333 3rd Avenue North<br>
+                        St. Petersburg ,FL 33701<br><br>
+                        Tel. No.: 888-317-0085<br><br>
+						Drive Up, Mortgage, Brokerage, Trust, Insurance
+                        </p>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-md-6" style="height:340px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225920.00378285514!2d-82.67733185!3d27.77897235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e663693aaa41%3A0x4cc4003bcd48bff!2sSt+Petersburg%2C+FL%2C+USA!5e0!3m2!1sen!2sin!4v1430911262804" frameborder="0" style="border:0;width:100%;height:100%"></iframe>
+                
+                </div>
+            </div>
+        </div>
+      <!-- END OF CONTAINER -->
+      <!-- FOOTER -->
+          <!--===================================================-->
+          
+           <footer class="footerBar" style="margin-top:5px; width:102%;">
+        <div class="container" style="width:100%;">
+        	<div class="col-md-7">
+            <p style="padding:10px 0px 0px -20px;font-size:13px;color:#fff">2015 Synovus Bank, Member FDIC and Equal Housing Lender All rights reserved.</p></div>
+            <div class="col-md-5">
+             <ul class="list-inline text-center footer-link" style="padding-top:12px;color:#fff;float:right;">
+            <li><a href="">Terms &amp; Conditions</a> |</li>
+            <li><a href="">Privacy policies</a> |</li>
+            <li><a href="">Safety &amp; Security</a> |</li>
+            <li><a href="">Site Map</a></li>
+            </ul>
+            </div>
+        </div>
+      </footer>
+      
+              </div>
+              
+  </div>
+ 
+  <!-- END SETTINGS -->
+  
+  
+ 
+  <!--=================================================-->
+  
+  <!--jQuery [ REQUIRED ]-->
+  
+  
+  
+  <!--BootstrapJS [ RECOMMENDED ]-->
+  <script src="js/bootstrap.min.js">
+  </script>
+  
+  
+  <!-- Plugins [ OPTIONAL ]-->
+  <script src="js/plugins.min.js">
+  </script>
+  
+  
+  <!--Demo script [ DEMONSTRATION ]-->
+  <script src="js/demo/demo.min.js">
+  </script>
+  
+  
+  <!--Specify page [ SAMPLE ]-->
+  <script src="js/demo/dashboard.js">
+  </script>
+
+  <script>
+	$(function() {
+    var today = new Date();
+    var curr_date = today.getDate();
+    var curr_month = today.getMonth();
+    var day = today.getDay();
+    var curr_year = today.getFullYear();
+    var m_names = new Array("January", "February", "March",
+        "April", "May", "June", "July", "August", "September",
+        "October", "November", "December");
+    var d_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+    document.getElementById('dateField').innerHTML = d_names[day] + ' , ' + m_names[curr_month] + " " + curr_date + 'th';
+    var hours = today.getHours();
+    hours = hours + 1;
+    var minutes = today.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var remainingMinutes = 60 - minutes;
+    document.getElementById('next0').innerHTML = hours + " " + ampm;
+    document.getElementById('next1').innerHTML = hours + 1 + " " + ampm;
+    document.getElementById('next2').innerHTML = hours + 2 + " " + ampm;
+    document.getElementById('next3').innerHTML = hours + 3 + " " + ampm;
+    document.getElementById('next4').innerHTML = hours + 4 + " " + ampm;
+    document.getElementById('next5').innerHTML = hours + 5 + " " + ampm;
+    document.getElementById('appointment').innerHTML = hours + " " + ampm + '&nbsp;';
+    var input = remainingMinutes * 60;
+
+    function calculateTime(timer) {
+        var timer = timer;
+        var mins = Math.floor(timer / 60);
+        var secs = timer % 60;
+        var time = (mins < 10 ? "0" : "") + mins + ":" + (secs < 10 ? "0" : "") + secs;
+        return time;
+    };
+
+    setInterval(function() {
+        data = calculateTime(input)
+        if (input > 0) {
+            $("#updateTimer").text(data + ' Mins');
+            input--;
+        } else {
+            $("#updateTimer").text("Time Out")
+        }
+
+    }, 1000);
+
+});
+
+  </script>
+  </body>
+  
+  
+  </html>
+  
