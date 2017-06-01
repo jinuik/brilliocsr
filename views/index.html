@@ -1,78 +1,51 @@
-<% layout('layout') -%>
-    <div style="text-align:center">
-    
-     <img src="install/images/brillio-logo.png"><br/><br/><br/>
-    <div id="iconContainer" class="container clearfix">
-        
-        <div class="col-sm-12 clearfix">
-            <div id="androidApp" class="col-sm-12 clearfix"><img src="install/images/android.png"></div>
-            <!--<div id="iosApp" class="col-sm-6 clearfix"><img src="install/images/ios.png"></div>-->
-        </div>    
-        <h4 class="col-sm-12 clearfix" style="margin-top:10%;">Click on icon to get the list of application</h4>
-    </div>
-    <div id="androidAppList" class="container clearfix" style="display:none">
-        
-        <div id="androidApp" class=" clearfix"><img src="install/images/android.png"></div>
-        <ul>
-            <li><a href="http://bdemo.herokuapp.com/install/trading_wearable.apk">A001 Trading Wearable</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/RealEstateAdmin.apk">A002 RealEstateAdmin</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/RealEstate.apk">A003 RealEstate</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/rb_sales.apk">A005 RB Sales</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/Master_card.apk">A006 MasterCard</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/CoatsGama.apk">A007 Coats Gama</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/Lenova.apk">A008 Lenova</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/hdfc.apk">A009 HDFC</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/FaceAuth.apk">A011 FaceRecognition Demo</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/CoatsTracker.apk">A012 Coats Tracker</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/brillioRealEstate.apk">A013 Brillio RealEstate</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/BrillioChat.apk">A015 BrillioChat</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/AssetHealth.apk">A017 Asset Health</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/temav1.apk">A019 Tema</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/BrillioConversation UI.apk">A020 BrillioConversationUI</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/Shelf_Scanner.apk">A021 ShelfScanner</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/brilliotracker.apk">Brillio Tracker</a></li>
-            
-                
-            
-        </ul>
-        <br/>
-        <hr/>
-        <ul style="color:orange">
-            
-            <li><a href="http://bdemo.herokuapp.com/install/RCI_UAT.apk" style="color:orange !important">A004 RCI - DRDO</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/HandOff_C_BGT_Staging.apk" style="color:orange !important">A010 Falconbrick Handoff</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/brilliopresence.apk" style="color:orange !important">A014 Brillio Presence </a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/botg.apk" style="color:orange !important">A016 Brillio On the Go</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/brillio_bank_customerapp.apk" style="color:orange !important">A022 Moxtra chat bot</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/com.rjo.apk" style="color:orange !important">A023 RJO UAT</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/Dupont.apk" style="color:orange !important">A024 Dupont</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/MankindApp_demo.apk" style="color:orange !important">A025 Mankind</a></li>
-           
-           
-           
-        </ul>
-    
-        <br/>
-        <hr/>
-        <ul style="color:orange">  
-             <li><a href="http://bdemo.herokuapp.com/install/BrillioVR.apk" style="color:orange !important">VR001 Brillio VR</a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/MCVRShopJax.apk" style="color:orange !important">VR002 MasterCard Shopping VR With Jax </a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/BrillioVR_Jax.apk" style="color:orange !important">VR003 Brillio VR With Jax </a></li>
-            <li><a href="http://bdemo.herokuapp.com/install/Master_card_VR_shop.apk" style="color:orange !important">MasterCard Shopping Virtual Reality</a></li>
-           
-        </ul>    
-        <br/>
-        <br/>
-        <h4>Click on links to download Android application</h4>
-    </div> 
-    <div id="iosAppList" class="container clearfix"  style="display:none">
-        <div id="iosApp" class="clearfix"><img src="install/images/ios.png"></div>
-         
-        <ul>
-            <li><a href="itms-services://?action=download-manifest&url=https://bdemo.herokuapp.com/install/iosapps/manifest.plist">Demo APP</a></li>
-            
-        </ul>
-        <br/><br/>
-        <h4>Click on links to download IOS application</h4>
-    </div>
-    </div>    
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: 12.972442, lng: 77.580643};
+        var brillioffice = {lat: 12.9105, lng: 77.5857};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Banglore'
+        });
+          
+        var marker1 = new google.maps.Marker({
+          position: brillioffice,
+          map: map,
+          title: 'Brillio'
+        });
+          
+      }
+    </script>
+    <<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDurzwNxXNxSycgV---lDXZa04bk9lxYs&callback=initMap"
+    async defer></script>
+  </body>
+</html>
