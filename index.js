@@ -5,8 +5,8 @@ var ejs = require('ejs-locals');
 var app = express();
 
 app.engine('html', ejs);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
+/*app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'html');*/
 
 app.use('/install', express.static(path.join(__dirname, 'install')));
 app.use(express.static(path.join(__dirname, 'public')));
