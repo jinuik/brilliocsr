@@ -8,21 +8,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+      
+      
+      
+
 
     <title>Brillio CSR</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+      <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+   
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -46,11 +51,8 @@
       
       <style> 
   #margin {
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-left: 45px;
-  margin-right: auto;
-  margin-left: auto;
+
+      padding: 1%;
 }
          
       </style>
@@ -65,10 +67,9 @@
 .map-responsive iframe{
     left:0;
     top:0;
-    padding-left: 45px;
-    padding-right: 45px;
-    height:75%;
-    width:75%;
+    padding: 1%;
+    height:100%;
+    width:100%;
     position:absolute;
 }
       </style>
@@ -76,8 +77,10 @@
   </head>
 
   <body>
-
-   <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+      
+			
+	
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -86,35 +89,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brillio CSR</a>
+          <a class="navbar-brand" href="#"><img src="../assetss/logo.png"  style="height:160%; padding:0;"></a>
+            
         </div>
+          
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
+              <li><a href="#about">CSR</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>/.nav-collapse 
+            
+        </div>
+          
       </div>
-    </nav>-->
-<!--
+    </nav>
+
     <div class="container">
 
       <div class="starter-template">
-        <h1>Brillio Bringing Smiles</h1>
-        <p class="lead">At Brillio, “Bringing Smiles” is the theme of our global corporate social responsibility initiative, and it takes many forms, from fostering career development and STEM skills with underserved young minds in India and the United States.</p>
+        <br>
+        
+          <img src="../assetss/bringing-smiles.png"  height="100" >
       </div>
         
    
-    </div> /.container 
-     -->
-
-     <div id="margin">
-          <h3>Brillio CSR Impact Google map</h3>
-      </div>
+    </div> 
      
-            
-        <div class="map-responsive"><iframe align="centre" src="https://www.google.com/maps/d/embed?mid=16GmK_8pNb6q4Zh2OtppmvHjyhCY" width="100%" height="450" frameborder="0" style="border:0" ></iframe></div>
+
+   
+        <div class="map-responsive"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=16GmK_8pNb6q4Zh2OtppmvHjyhCY" width="100%" height="auto" frameborder="0" style="border:0" ></iframe></div>
       
        
 
@@ -123,115 +128,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
       
-         <!--<script>
-
-   //   function initMap() {
-          
-       /* var myLatLng = {lat: 12.972442, lng: 77.580643};
-        var brillioffice = {lat: 12.9105, lng: 77.5857};
-        var Samarthanam = {lat: 12.914390, lng: 77.641406};
-        var Sahakari = {lat: 12.918678, lng: 77.597867};*/
-          
-          var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: new google.maps.LatLng(12.972442, 77.580643),
-          mapTypeId: 'roadmap'
-        });
-
-          
-       /* var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: myLatLng
-        });*/
-          
- var image = '/assets/img/school.png'
- var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = {
-          parking: {
-            icon: iconBase + 'parking_lot_maps.png'
-          },
-          library: {
-            icon: iconBase + 'library_maps.png'
-          },
-          info: {
-            icon: iconBase + 'info-i_maps.png'
-          }
-        };
         
-          
-var features = [
-          {
-            position: new google.maps.LatLng(12.972442, 77.580643),
-            type: 'info',
-            title:'Bangalore'
-            
-              
-          }, {
-            position: new google.maps.LatLng(12.9105, 77.5857),
-            type: 'info',
-            title: 'Brillio'
-
-          }, {
-            position: new google.maps.LatLng(12.914390, 77.641406),
-            type: 'parking',
-            title: 'Samarthanam Trust for the Disabled',
-            icon: image
-          }, {
-            position: new google.maps.LatLng(12.918678, 77.597867),
-            type: 'library',
-            title: 'Sahakari School',
-            icon: image
-          }
-          
-        ];
-
-        // Create markers.
-        features.forEach(function(feature) {
-          var marker = new google.maps.Marker({
-            position: feature.position,
-            title: feature.title,
-            icon: feature.icon,
-            /*icon: icons[feature.type].icon,*/
-            map: map
-          });
-        });
-          
-        /*var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Banglore',
-            type: 'parking'
-        });
-          
-        var marker1 = new google.maps.Marker({
-          position: brillioffice,
-          map: map,
-          title: 'Brillio'
-          
-        });
-          
-        var marker = new google.maps.Marker({
-          position: Samarthanam,
-          map: map,
-          title: 'Samarthanam Trust for the Disabled'
-        });
-          
-          var marker = new google.maps.Marker({
-          position: Sahakari,
-          map: map,
-          title: 'Sahakari School'
-        });*/
-          
-       
-          
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDurzwNxXNxSycgV---lDXZa04bk9lxYs&callback=initMap"
-    async defer></script>
-      -->
   </body>
 </html>
