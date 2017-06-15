@@ -8,13 +8,14 @@ app.engine('html', ejs);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
-app.use('/install', express.static(path.join(__dirname, 'install')));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'bower_components')));
+/*app.use('/install', express.static(path.join(__dirname, 'install')));*/
+//app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'bower_components')));
 
-app.get('/', function (req, res) {
-  res.render('index',{title:'Android & IOS Demo Apps'})
-});
+app.use('/', express.static(__dirname + ''));
+//app.get('/', function (req, res) {
+//  res.render('index',{title:'Android & IOS Demo Apps'})
+//});
 
 process.on('uncaughtException', function(err){
    console.log('handeleed exp', err) 
